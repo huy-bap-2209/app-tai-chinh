@@ -1,17 +1,19 @@
-/* Reset cơ bản */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Global font */
+:root {
+  --header-height: 64px; /* adjust as needed */
+}
+
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
-/* Link reset */
 a {
   text-decoration: none;
   color: inherit;
