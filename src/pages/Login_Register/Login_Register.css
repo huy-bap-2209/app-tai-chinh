@@ -39,9 +39,10 @@
 
 /* left layout */
 .login-register-left {
-  flex: 1; /*50% width viewport*/
+  flex: 0.9; /*50% width viewport*/
   position: relative;
   overflow: hidden;
+  /* margin-top: ; */
 }
 
 .background__login-img {
@@ -104,7 +105,7 @@
 
 /* right layout */
 .login-register-right {
-  flex: 1; /*50% width viewport*/
+  flex: 1.2; /*50% width viewport*/
   display: flex;
   justify-content: center;
   align-items: center;
