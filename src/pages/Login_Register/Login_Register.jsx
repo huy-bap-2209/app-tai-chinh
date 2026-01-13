@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./Login_Register.css";
-import LogoLogin from "../../images/logo_login.svg";
+// import LogoLogin from "../../images/logo_login.svg";
 import BackgroundLogin from "../../images/loan-img-3.jpg";
 
 function Login_Register() {
@@ -84,10 +84,12 @@ function Login_Register() {
               <a href="">Cần trợ giúp?</a>
             )}
           </div>
-
-          <button type="submit" className="btn-login">
-            {isLoginRegister}
-          </button>
+          <div className="back-home-page-btn-login">
+            <a href="/home_page">Quay lại Trang Chủ</a>
+            <button type="submit" className="btn-login">
+              {isLoginRegister}
+            </button>
+          </div>
         </form>
       </div>
     </div>
