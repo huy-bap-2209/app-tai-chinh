@@ -73,10 +73,10 @@ function Login_Register() {
             <input type="password" placeholder="Confirm Password" />
           )}
           <div className="login-options">
-            <label>
+            <div className="remember-checkbox">
               <input type="checkbox" className="login-options-checkbox" />
-              Remember Me
-            </label>
+              <label>Remember Me</label>
+            </div>
 
             {isLoginRegister === "Login" ? (
               <a href="">Quên mật khẩu?</a>
@@ -85,7 +85,7 @@ function Login_Register() {
             )}
           </div>
           <div className="back-home-page-btn-login">
-            <a href="/home_page">Quay lại Trang Chủ</a>
+            <a href="/">Quay lại Trang Chủ</a>
             <button type="submit" className="btn-login">
               {isLoginRegister}
             </button>

@@ -13,7 +13,7 @@ function Navbar() {
             <h2 className="header-container-navbar-title">BTC</h2>
           </div>
           <nav className="header-container-navbar-list">
-            <a href="#">Trang chủ</a>
+            <a href="/">Trang chủ</a>
             <a href="#">Dịch vụ</a>
             <a href="#">Giới thiệu</a>
             <a href="#">Liên hệ</a>
