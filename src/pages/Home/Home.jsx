@@ -10,7 +10,10 @@ import homeFeature1 from "../../images/home-feature-1.svg";
 import homeFeature2 from "../../images/home-feature-2.svg";
 import homeFeature3 from "../../images/home-feature-3.svg";
 import homeFeature4 from "../../images/home-feature-4.svg";
+
 import Navbar from "../../components/navbar/Navbar";
+import Offers from "../../components/offers/Offers";
+import Footer from "../../components/footer/Footer";
 
 function Home() {
   return (
@@ -94,21 +97,9 @@ function Home() {
           </p>
         </div>
       </div>
-      <div className="home-offers">
-        <div className="home-offers-text">
-          <h5>ƯU ĐÃI CÓ SẴN</h5>
-          <h1>
-            Ưu đãi hiện tại dành <br />
-            cho bạn
-          </h1>
-          <p>
-            Xem các ưu đãi tốt nhất hiện có từ các đối tác của <br /> chúng tôi
-            ở bên dưới.
-          </p>
-        </div>
-
-        <button className="home-offers-btn">Chọn theo danh mục</button>
-      </div>
+     
+      <Offers />
+      <Footer />
     </>
   );
 }

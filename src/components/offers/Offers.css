@@ -1,0 +1,133 @@
+.offers-container-header {
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 10rem 2rem 10rem;
+  padding-top: 2rem;
+}
+
+.offers-container-header-text > * {
+  /*all thẻ con trong class này đều áp dụng*/
+  margin-bottom: 1rem;
+}
+
+.offers-container-header h5 {
+  color: #2563eb;
+}
+
+.offers-container-header h1 {
+  font-size: 3rem;
+  line-height: 3rem;
+}
+
+.offers-container-header p {
+  color: #6b7280;
+}
+
+.offers-container-header-btn {
+  background-color: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 16rem;
+  height: 3.6rem;
+  margin-right: 4rem;
+}
+
+.offers-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  /* margin: 4rem 0; */
+  padding: 3rem 0;
+  background-color: #f6f8fc;
+  flex-wrap: wrap;
+}
+
+.offers-container-list {
+  display: flex;
+  /* flex-wrap: wrap; */
+  /* flex-direction: column; */
+  /* align-items: center; */
+  text-align: left;
+  gap: 2.5rem;
+  background-color: #fff;
+  padding: 2rem 1.5rem;
+  /* border-radius: 12px; */
+  width: 20rem;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.offers-card-items {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.offers-card {
+  display: flex;
+  align-items: center;
+}
+
+.offers-card-title span {
+  color: #1ad08c;
+}
+
+.offers-card-header img {
+  width: 4rem;
+  height: 4rem;
+  /* background-color: #f2f2f2; */
+}
+
+/* .offers-container-list {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-align: left;
+} */
+
+.offers-card-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* .offers-card-info {
+  display: flex;
+  align-items: center;
+  margin-right: 2rem;
+} */
+
+.offers-card-info img {
+  width: 1.4rem;
+  height: 1.4rem;
+  margin-right: 0.6rem;
+}
+
+.offers-card-btn {
+  display: flex;
+  justify-content: space-around;
+  /* margin-top: 2rem; */
+}
+
+.offers-card-btn button:first-child {
+  background-color: #1ad08c;
+  border: none;
+  padding: 0.8rem 1.8rem;
+  color: #fff;
+  border-radius: 25px;
+}
+
+.offers-card-btn button:last-child {
+  background-color: #fff;
+  border: 2px solid #2563eb;
+  padding: 0.8rem 1.8rem;
+  color: #2563eb;
+  border-radius: 25px;
+}

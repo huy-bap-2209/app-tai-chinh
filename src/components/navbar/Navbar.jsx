@@ -2,6 +2,8 @@ import React from "react";
 import { useState } from "react";
 import "./Navbar.css";
 
+import logoWeb from "../../images/logo_web.png";
+
 function Navbar() {
   const [openSidebar, setOpenSidebar] = useState(false);
 
@@ -9,8 +11,11 @@ function Navbar() {
     <div>
       <header className="header-container">
         <nav className="header-container-navbar">
-          <div className="header-container-navbar-circle">
+          {/* <div className="header-container-navbar-circle">
             <h2 className="header-container-navbar-title">BTC</h2>
+          </div> */}
+          <div className="header-container-navbar-logo">
+            <img src={logoWeb} alt="Logo Web" />
           </div>
           <nav className="header-container-navbar-list">
             <a href="/">Trang chủ</a>

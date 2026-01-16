@@ -19,7 +19,7 @@
   gap: 0.5rem;
   width: 300rem;
   max-width: 640px; /* giới hạn chiều rộng nội dung */
-  margin: 0 0 2rem 8rem; /* đặt phần tử về phía trái */
+  margin: 0 0 0 8rem; /* đặt phần tử về phía trái */
   color: #000;
   font-size: 1.4rem;
 }
@@ -120,45 +120,7 @@
   line-height: 1.6;
 }
 
-.home-offers {
-  text-align: left;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 2rem 10rem 2rem 10rem;
-}
 
-.home-offers-text > * {
-  /*all thẻ con trong class này đều áp dụng*/
-  margin-bottom: 1rem;
-}
-
-.home-offers h5 {
-  color: #2563eb;
-}
-
-.home-offers h1 {
-  font-size: 3rem;
-  line-height: 3rem;
-}
-
-.home-offers p {
-  color: #6b7280;
-}
-
-.home-offers-btn {
-  background-color: #2563eb;
-  color: #fff;
-  border: none;
-  border-radius: 999px;
-  padding: 0.75rem 1.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  cursor: pointer;
-  width: 16rem;
-  height: 3.6rem;
-  margin-right: 4rem;
-}
 
 /* responsive */
 @media (max-width: 600px) {
