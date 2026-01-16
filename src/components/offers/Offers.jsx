@@ -68,7 +68,6 @@ function Offers() {
             <button>Nhận khoản vay</button>
             <button>Thông tin</button>
           </div>
-          
         </div>
         <div className="offers-container-list">
           <div className="offers-card">
@@ -104,7 +103,6 @@ function Offers() {
             <button>Nhận khoản vay</button>
             <button>Thông tin</button>
           </div>
-          
         </div>
         <div className="offers-container-list">
           <div className="offers-card">
@@ -140,7 +138,6 @@ function Offers() {
             <button>Nhận khoản vay</button>
             <button>Thông tin</button>
           </div>
-          
         </div>
         <div className="offers-container-list">
           <div className="offers-card">
@@ -176,7 +173,76 @@ function Offers() {
             <button>Nhận khoản vay</button>
             <button>Thông tin</button>
           </div>
-          
+        </div>
+        <div className="offers-container-list">
+          <div className="offers-card">
+            <div className="offers-card-header">
+              <img src={vietcombankLogo} alt="Vietcombank" />
+            </div>
+            <div className="offers-card-title">
+              <h5>Vietcombank</h5>
+              <p>
+                <span>$4000 </span>/ cho doanh nghiệp
+              </p>
+            </div>
+          </div>
+          <hr />
+          <div className="offers-card-info">
+            <div className="offers-card-info">
+              <img src={percentIcon} alt="" />
+              10
+            </div>
+            <div className="offers-card-info">
+              <img src={hotOffersIcon} alt="" />
+              Ưu đãi hấp dẫn
+            </div>
+            <div className="offers-card-info">
+              <img src={timeWorkingIcon} alt="" />7 ngày
+            </div>
+          </div>
+          <p>
+            Một lựa chọn tuyệt vời cho những ai không muốn tiết lộ dữ liệu tài
+            chính của họ.
+          </p>
+          <div className="offers-card-btn">
+            <button>Nhận khoản vay</button>
+            <button>Thông tin</button>
+          </div>
+        </div>
+        <div className="offers-container-list">
+          <div className="offers-card">
+            <div className="offers-card-header">
+              <img src={vietcombankLogo} alt="Vietcombank" />
+            </div>
+            <div className="offers-card-title">
+              <h5>Vietcombank</h5>
+              <p>
+                <span>$4000 </span>/ cho doanh nghiệp
+              </p>
+            </div>
+          </div>
+          <hr />
+          <div className="offers-card-info">
+            <div className="offers-card-info">
+              <img src={percentIcon} alt="" />
+              10
+            </div>
+            <div className="offers-card-info">
+              <img src={hotOffersIcon} alt="" />
+              Ưu đãi hấp dẫn
+            </div>
+            <div className="offers-card-info">
+              <img src={timeWorkingIcon} alt="" />7 ngày
+            </div>
+          </div>
+          <p>
+            Một lựa chọn tuyệt vời cho những ai không muốn tiết lộ dữ liệu tài
+            chính của họ.
+          </p>
+          <div className="offers-card-btn">
+            <button>Nhận khoản vay</button>
+            <button>Thông tin</button>
+          </div>
         </div>
       </div>
     </>
