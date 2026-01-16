@@ -1,15 +1,17 @@
 import React from "react";
 import "./Offers.css";
 
-import agribankLogo from "../../images/agribank-icon.jpg";
-import vietcombankLogo from "../../images/vietcombank-icon.jpg";
+import agribankLogo from "../../images/agribank-icon.png";
+import vietcombankLogo from "../../images/vietcombank-icon.png";
 import saigonbankLogo from "../../images/saigonbank-icon.png";
-import vibLogo from "../../images/vib-icon.jpg";
-import vietinbankLogo from "../../images/vietinbank-icon.jpg";
+import vibLogo from "../../images/vib-icon.png";
+import vietinbankLogo from "../../images/vietinbank-icon.png";
 import vpbankLogo from "../../images/vpbank-icon.png";
 import percentIcon from "../../images/percent.svg";
 import hotOffersIcon from "../../images/hot-offers.svg";
 import timeWorkingIcon from "../../images/time.svg";
+import offersImg from "../../images/offers-img.jpg";
+import rightArrowIcon from "../../images/right-arrow-icon.svg";
 
 function Offers() {
   return (
@@ -42,7 +44,7 @@ function Offers() {
             <div className="offers-card-title">
               <h5>Vietcombank</h5>
               <p>
-                <span>$4000 </span>/ cho doanh nghiệp
+                <span>$100,000,000đ </span>/ cho doanh nghiệp
               </p>
             </div>
           </div>
@@ -50,14 +52,14 @@ function Offers() {
           <div className="offers-card-info">
             <div className="offers-card-info">
               <img src={percentIcon} alt="" />
-              10
+              12
             </div>
             <div className="offers-card-info">
               <img src={hotOffersIcon} alt="" />
-              Ưu đãi hấp dẫn
+              Lãi suất hấp dẫn
             </div>
             <div className="offers-card-info">
-              <img src={timeWorkingIcon} alt="" />7 ngày
+              <img src={timeWorkingIcon} alt="" />7 ngày làm việc
             </div>
           </div>
           <p>
@@ -72,32 +74,35 @@ function Offers() {
         <div className="offers-container-list">
           <div className="offers-card">
             <div className="offers-card-header">
-              <img src={vietcombankLogo} alt="Vietcombank" />
+              <img
+                src={agribankLogo}
+                alt="Vietcombank"
+                className="agribank-icon"
+              />
             </div>
             <div className="offers-card-title">
-              <h5>Vietcombank</h5>
+              <h5>Agribank</h5>
               <p>
-                <span>$4000 </span>/ cho doanh nghiệp
+                <span>5,000,000đ </span>/ cho sinh viên
               </p>
             </div>
           </div>
           <hr />
           <div className="offers-card-info">
             <div className="offers-card-info">
-              <img src={percentIcon} alt="" />
-              10
+              <img src={percentIcon} alt="" />9
             </div>
             <div className="offers-card-info">
               <img src={hotOffersIcon} alt="" />
-              Ưu đãi hấp dẫn
+              Lãi suất hấp dẫn
             </div>
             <div className="offers-card-info">
-              <img src={timeWorkingIcon} alt="" />7 ngày
+              <img src={timeWorkingIcon} alt="" />3 ngày làm việc
             </div>
           </div>
           <p>
-            Một lựa chọn tuyệt vời cho những ai không muốn tiết lộ dữ liệu tài
-            chính của họ.
+            Phương sách cuối cùng trong trường hợp khẩn cấp thực sự - nếu bạn
+            cần trả tiền cho học kỳ tiếp theo.
           </p>
           <div className="offers-card-btn">
             <button>Nhận khoản vay</button>
@@ -107,12 +112,16 @@ function Offers() {
         <div className="offers-container-list">
           <div className="offers-card">
             <div className="offers-card-header">
-              <img src={vietcombankLogo} alt="Vietcombank" />
+              <img
+                src={saigonbankLogo}
+                alt="Vietcombank"
+                className="saigonbank-icon"
+              />
             </div>
             <div className="offers-card-title">
-              <h5>Vietcombank</h5>
+              <h5>Saigonbank</h5>
               <p>
-                <span>$4000 </span>/ cho doanh nghiệp
+                <span>$50,000,000đ </span>/ cho doanh nghiệp vừa & nhỏ
               </p>
             </div>
           </div>
@@ -120,19 +129,19 @@ function Offers() {
           <div className="offers-card-info">
             <div className="offers-card-info">
               <img src={percentIcon} alt="" />
-              10
+              11
             </div>
             <div className="offers-card-info">
               <img src={hotOffersIcon} alt="" />
-              Ưu đãi hấp dẫn
+              Lãi suất hấp dẫn
             </div>
             <div className="offers-card-info">
-              <img src={timeWorkingIcon} alt="" />7 ngày
+              <img src={timeWorkingIcon} alt="" />6 ngày làm việc
             </div>
           </div>
           <p>
-            Một lựa chọn tuyệt vời cho những ai không muốn tiết lộ dữ liệu tài
-            chính của họ.
+            Quỹ để củng cố tài sản lưu thông hoặc hoàn thành một thỏa thuận tốt
+            mà không lo về lãi suất.
           </p>
           <div className="offers-card-btn">
             <button>Nhận khoản vay</button>
@@ -142,12 +151,12 @@ function Offers() {
         <div className="offers-container-list">
           <div className="offers-card">
             <div className="offers-card-header">
-              <img src={vietcombankLogo} alt="Vietcombank" />
+              <img src={vibLogo} alt="Vietcombank" />
             </div>
             <div className="offers-card-title">
-              <h5>Vietcombank</h5>
+              <h5>Vib</h5>
               <p>
-                <span>$4000 </span>/ cho doanh nghiệp
+                <span>$10,000,000đ </span>/ cho người về hưu
               </p>
             </div>
           </div>
@@ -155,19 +164,19 @@ function Offers() {
           <div className="offers-card-info">
             <div className="offers-card-info">
               <img src={percentIcon} alt="" />
-              10
+              100
             </div>
             <div className="offers-card-info">
               <img src={hotOffersIcon} alt="" />
-              Ưu đãi hấp dẫn
+              Lãi suất hấp dẫn
             </div>
             <div className="offers-card-info">
-              <img src={timeWorkingIcon} alt="" />7 ngày
+              <img src={timeWorkingIcon} alt="" />3 ngày làm việc
             </div>
           </div>
           <p>
-            Một lựa chọn tuyệt vời cho những ai không muốn tiết lộ dữ liệu tài
-            chính của họ.
+            Loại cho vay cho người cao tuổi. Loại khoản vay ngắn hạn này được
+            coi là rủi ro cao.
           </p>
           <div className="offers-card-btn">
             <button>Nhận khoản vay</button>
@@ -177,12 +186,12 @@ function Offers() {
         <div className="offers-container-list">
           <div className="offers-card">
             <div className="offers-card-header">
-              <img src={vietcombankLogo} alt="Vietcombank" />
+              <img src={vietinbankLogo} alt="Vietcombank" />
             </div>
             <div className="offers-card-title">
-              <h5>Vietcombank</h5>
+              <h5>Vietinbank</h5>
               <p>
-                <span>$4000 </span>/ cho doanh nghiệp
+                <span>$80,000,000đ </span>/ cho doanh nghiệp
               </p>
             </div>
           </div>
@@ -190,19 +199,19 @@ function Offers() {
           <div className="offers-card-info">
             <div className="offers-card-info">
               <img src={percentIcon} alt="" />
-              10
+              14
             </div>
             <div className="offers-card-info">
               <img src={hotOffersIcon} alt="" />
-              Ưu đãi hấp dẫn
+              Lãi suất hấp dẫn
             </div>
             <div className="offers-card-info">
-              <img src={timeWorkingIcon} alt="" />7 ngày
+              <img src={timeWorkingIcon} alt="" />7 ngày làm việc
             </div>
           </div>
           <p>
-            Một lựa chọn tuyệt vời cho những ai không muốn tiết lộ dữ liệu tài
-            chính của họ.
+            Phát triển công ty của bạn mà không phải lo lắng về vốn thả nổi lại
+            có lãi suất tối.
           </p>
           <div className="offers-card-btn">
             <button>Nhận khoản vay</button>
@@ -212,36 +221,46 @@ function Offers() {
         <div className="offers-container-list">
           <div className="offers-card">
             <div className="offers-card-header">
-              <img src={vietcombankLogo} alt="Vietcombank" />
+              <img src={vpbankLogo} alt="Vietcombank" className="vpbank-icon" />
             </div>
             <div className="offers-card-title">
-              <h5>Vietcombank</h5>
+              <h5>Vpbank</h5>
               <p>
-                <span>$4000 </span>/ cho doanh nghiệp
+                <span>$8,000,000đ </span>/ cho sinh viên
               </p>
             </div>
           </div>
           <hr />
           <div className="offers-card-info">
             <div className="offers-card-info">
-              <img src={percentIcon} alt="" />
-              10
+              <img src={percentIcon} alt="" />8
             </div>
             <div className="offers-card-info">
               <img src={hotOffersIcon} alt="" />
-              Ưu đãi hấp dẫn
+              Lãi suất hấp dẫn
             </div>
             <div className="offers-card-info">
-              <img src={timeWorkingIcon} alt="" />7 ngày
+              <img src={timeWorkingIcon} alt="" />2 ngày làm việc
             </div>
           </div>
           <p>
-            Một lựa chọn tuyệt vời cho những ai không muốn tiết lộ dữ liệu tài
-            chính của họ.
+            Cánh tay phải đắc lực cho sinh viên vào những ngày cuối tháng không
+            phải ăn mỳ tôm.
           </p>
           <div className="offers-card-btn">
             <button>Nhận khoản vay</button>
             <button>Thông tin</button>
+          </div>
+        </div>
+        <div className="offers-img">
+          <img src={offersImg} alt="" />
+          <div className="offers-img-desc">
+            <h5>CÁC LỰA CHỌN VAY</h5>
+            <h1>Chúng tôi chỉ hợp tác với những <span> Ngân Hàng Tốt Nhất</span> </h1>
+            <h3>Nhận ngay các ưu đãi tốt nhất từ các đối tác của chúng tôi ! </h3>
+            <button>xem thêm
+              <img src={rightArrowIcon} alt="" className="offers-right-arrow" />
+            </button>
           </div>
         </div>
       </div>

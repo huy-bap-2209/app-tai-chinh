@@ -1,7 +1,7 @@
 .main-footer {
   background-color: #265ec2;
   color: white;
-  padding: 8rem 10rem 0 10rem;
+  padding: 8rem 8rem 0 10rem;
   text-align: left;
 }
 
@@ -188,4 +188,21 @@
   justify-content: space-between;
   font-size: 1.2rem;
   padding: 1rem 0 1rem 0;
+}
+
+.agribank-icon  {
+  width: 3rem !important;
+  height: 2.4rem !important;
+  /* object-fit: cover; */
+}
+
+.saigonbank-icon{
+    width: 3rem !important;
+  height: 3rem !important;
+}
+
+.vpbank-icon {
+  width: 5rem !important;
+  height: 3rem !important;
+  /* object-fit: cover; */
 }

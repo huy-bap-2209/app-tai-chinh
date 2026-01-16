@@ -61,18 +61,18 @@
   /* border-radius: 12px; */
   width: 100%;
   flex: 1 1 calc(33.333% - 2rem); /* 3 card / hàng, trừ gap */
-  margin: 0 rem;
+  border-top: #2563eb 6px solid;
+  padding: 3rem 3.2rem;
 }
 
-.offers-card-items {
-  display: flex;
-  gap: 1.5rem;
-  flex-wrap: wrap;
+.offers-container-list p {
+  color: #828292;
 }
 
 .offers-card {
   display: flex;
   align-items: center;
+  gap: 1rem;
 }
 
 .offers-card-title span {
@@ -82,36 +82,48 @@
 .offers-card-header img {
   width: 4rem;
   height: 4rem;
-  /* background-color: #f2f2f2; */
+  object-fit: cover;
 }
 
-.offers-container-list {
-  padding: 3rem 3rem;
+.offers-card-header {
+  /*chỉnh hình tròn */
+  width: 4.2rem;
+  height: 4.2rem;
+  border-radius: 50%;
+  flex-shrink: 0; /*không bị flex ép méo*/
+  overflow: hidden; /*ẩn tất cả element bị tràn*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f4f6fe;
+}
+
+.offers-card-title h5 {
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
 }
 
 .offers-card-info {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  
+  gap: 0.4rem;
+  color: #515151;
 }
-
-/* .offers-card-info {
-  display: flex;
-  align-items: center;
-  margin-right: 2rem;
-} */
 
 .offers-card-info img {
   width: 1.4rem;
   height: 1.4rem;
-  margin-right: 0.6rem;
 }
 
 .offers-card-btn {
   display: flex;
   justify-content: space-between;
   /* margin-top: 2rem; */
+}
+
+.offers-card-btn button {
+  cursor: pointer;
 }
 
 .offers-card-btn button:first-child {
@@ -128,4 +140,64 @@
   padding: 0.8rem 1.6rem;
   color: #2563eb;
   border-radius: 25px;
+}
+
+.offers-img {
+  position: relative;
+  margin-top: 2rem;
+  overflow: hidden;
+}
+
+.offers-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.offers-img-desc {
+  position: absolute;
+  top: 25%;
+  left: 5%;
+  width: 50%;
+  color: #fff;
+  text-align: left;
+}
+
+.offers-img-desc h5 {
+  color: #00ffa2;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.offers-img-desc h1 {
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+  line-height: 3.2rem;
+}
+
+.offers-img-desc h3 {
+  font-size: 1rem;
+  margin-top: 2rem;
+}
+
+.offers-img-desc h1 span {
+  color: #000;
+  background-color: #fff;
+  padding: 4px;
+}
+
+.offers-img-desc button {
+  display: flex;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 25px;
+  background-color: #1ad08c;
+  color: #fff;
+  margin-top: 2rem;
+}
+
+.offers-img button img {
+  width: 1rem;
+  height: 1rem;
+  margin-left: 0.5rem;
 }

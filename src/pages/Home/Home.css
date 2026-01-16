@@ -85,7 +85,7 @@
 .home-feature-items {
   background: #fff;
   padding: 2.5rem 2rem;
-  border-radius: 12px;
+  /* border-radius: 12px; */
   text-align: left;
   font-size: 1.2rem;
 }
@@ -119,8 +119,6 @@
   font-size: 0.95rem;
   line-height: 1.6;
 }
-
-
 
 /* responsive */
 @media (max-width: 600px) {

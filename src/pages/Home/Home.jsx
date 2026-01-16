@@ -24,7 +24,7 @@ function Home() {
         {/* main content */}
         <div className="home-container-content">
           <p className="home-container-content-desc">
-            Nhận ngay tiền mặt lên tới $40 000
+            Nhận ngay tiền mặt lên tới $100,000,000đ
           </p>
           <h1 className="home-container-content-title">
             NHẬN <span>ƯU ĐÃI LÊN TỚI 70%</span> GIÁ TRỊ VAY KHI THANH TOÁN TẠI
