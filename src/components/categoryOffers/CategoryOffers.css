@@ -1,0 +1,130 @@
+.category-container {
+  background-color: #f6f8fc;
+}
+
+.category-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 48px 160px;
+  text-align: left;
+}
+
+.category-header-left > * {
+  margin-bottom: 0.8rem;
+}
+
+.category-header-left h5 {
+  color: #2563eb;
+  font-size: 0.8rem;
+}
+
+.category-header-left h2 {
+  font-size: 2.8rem;
+}
+
+.category-header-right {
+  font-size: 1.4rem;
+  width: 30rem;
+  margin-top: 1.4rem;
+  color: rgb(93, 93, 93);
+  line-height: 1.8rem;
+}
+
+.category-tab-list {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  padding: 0 160px;
+  margin-bottom: 3rem;
+  cursor: pointer;
+}
+
+.category-tab-wrapper {
+  text-align: left;
+  margin: 0 0;
+}
+
+.category-offers-card {
+  background: #fff;
+  padding: 2rem;
+  /* width: 100%; */
+  max-width: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.category-offers-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.category-offers-card h3 span {
+  color: #1ad08c;
+}
+
+.category-offers-info {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.dot-text {
+  position: relative;
+  padding-left: 14px;
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+.dot-text::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  background-color: #2563eb;
+  border-radius: 50%;
+}
+
+.offers-desc {
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+}
+
+.offers-actions {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.offers-actions button:first-child {
+  color: #1ad08c;
+}
+
+.offers-actions button:last-child {
+  color: #6b7280;
+}
+
+.btn-underline {
+  background: none;
+  border: none;
+  color: #2563eb;
+  cursor: pointer;
+  font-size: 0.8rem;
+  text-decoration: underline;
+}
+
+.category-offers-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 card / hàng */
+  gap: 2rem;
+  padding: 0 160px;
+}
+
+.category-tab-wrapper-content {
+  display: none;
+}
+
+.category-tab-wrapper-content.active {
+  display: block;
+}

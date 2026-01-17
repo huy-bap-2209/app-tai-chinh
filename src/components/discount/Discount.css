@@ -1,0 +1,74 @@
+.discount-container {
+  background-color: #f9f9f9;
+  padding: 6rem 10rem;
+  text-align: center;
+  text-align: left;
+}
+
+.discount-container-header {
+  font-size: 0.8rem;
+  color: #2563eb;
+  margin-bottom: 1.4rem;
+}
+
+.discount-container h1 {
+  font-size: 2.6rem;
+  margin-bottom: 0.6rem;
+}
+
+.discount-container h4 {
+  color: rgb(93, 93, 93);
+  margin-bottom: 1.4rem;
+}
+
+.discount-container-title {
+  margin: 1.4rem 0;
+  color: rgb(93, 93, 93);
+  /* width: 96%; */
+  font-size: 1.1rem;
+}
+
+.discount-container-title a {
+  color: #1ad197;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.loans-video {
+  width: 100%;
+  /* max-width: 640px; */
+  height: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.discount-bank {
+  display: flex;
+  justify-content: space-between;
+  margin: 1.6rem 0;
+}
+
+.discount-bank-item {
+  width: 22%;
+  background: #fff;
+  padding: 1.6rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  /* cursor: pointer; */
+}
+
+.discount-bank-item h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+}
+
+.discount-bank-item i {
+  font-size: 0.9rem;
+  color: rgb(93, 93, 93);
+}
+
+.discount-bank-item p {
+  margin-top: 0.8rem;
+  font-size: 0.8rem;
+  color: #1ad197;
+}

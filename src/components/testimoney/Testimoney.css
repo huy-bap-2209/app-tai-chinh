@@ -1,0 +1,92 @@
+.testimoney-container {
+  background-color: #f6f8fc;
+  padding: 3rem 10rem;
+}
+
+.tesimoney-header-left > * {
+  margin-bottom: 0.8rem;
+}
+
+.testimoney-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 8rem;
+}
+
+.tesimoney-header-left {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.tesimoney-header-left h5 {
+  color: #2563eb;
+  font-size: 0.8rem;
+}
+
+.tesimoney-header-left h1 {
+  font-size: 2.8rem;
+  width: 110%;
+}
+
+.tesimoney-header-left p {
+  font-size: 1rem;
+  /* margin-top: 1.4rem; */
+  color: rgb(93, 93, 93);
+  font-weight: bold;
+}
+
+.testimoney-header-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  text-align: left;
+}
+
+.testimoney-header-right-img {
+  /* width: 100%; */
+  max-width: 400px;
+}
+
+.testimoney-header-right-img img {
+  width: 6rem;
+  height: 6rem;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimoney-header-right-title {
+}
+
+.testimoney-header-right-title h4 {
+  font-size: 1.4rem;
+  width: 100%;
+  margin-bottom: 0.4rem;
+}
+
+.testimoney-header-right-title p {
+  color: rgb(93, 93, 93);
+  margin-bottom: 0.4rem;
+}
+
+.testimoney-header-right-title span {
+  color: #1ad08c;
+}
+
+.testimoney-list {
+  display: flex;
+}
+
+.testimoney-item {
+text-align: left;
+}
+
+.testimoney-item-img img {
+  width: 100%;
+  height: 100%;
+}

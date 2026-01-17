@@ -14,6 +14,9 @@ import homeFeature4 from "../../images/home-feature-4.svg";
 import Navbar from "../../components/navbar/Navbar";
 import Offers from "../../components/offers/Offers";
 import Footer from "../../components/footer/Footer";
+import CategoryOffers from "../../components/categoryOffers/CategoryOffers";
+import Discount from "../../components/discount/Discount";
+import Testimoney from "../../components/testimoney/testimoney";
 
 function Home() {
   return (
@@ -97,8 +100,11 @@ function Home() {
           </p>
         </div>
       </div>
-     
+
       <Offers />
+      <CategoryOffers />
+      <Discount />
+      <Testimoney />
       <Footer />
     </>
   );
