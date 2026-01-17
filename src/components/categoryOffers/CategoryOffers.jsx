@@ -1,5 +1,5 @@
-import { useState, forwardRef } from "react";
-import { Link } from "react-router-dom";
+import { useState, forwardRef, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 import "./CategoryOffers.css";
 
@@ -9,6 +9,22 @@ const CategoryOffers = forwardRef((props, ref) => {
   const [activeTab, setActiveTab] = useState(1);
   const [popUp, setPopUp] = useState(false);
   const [selectedBank, setSelectedBank] = useState("");
+
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.state?.scrollY !== undefined) {
+      window.scrollTo({
+        top: location.state.scrollY,
+        behavior: "instant",
+      });
+    }
+
+    if (location.state?.reopenLoan) {
+      setSelectedBank(location.state.bankName);
+      setPopUp(true);
+    }
+  }, [location.state]);
 
   const handleOpenModal = (bankName) => {
     setSelectedBank(bankName);

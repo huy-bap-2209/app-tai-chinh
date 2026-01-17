@@ -190,14 +190,14 @@
   padding: 1rem 0 1rem 0;
 }
 
-.agribank-icon  {
+.agribank-icon {
   width: 3rem !important;
   height: 2.4rem !important;
   /* object-fit: cover; */
 }
 
-.saigonbank-icon{
-    width: 3rem !important;
+.saigonbank-icon {
+  width: 3rem !important;
   height: 3rem !important;
 }
 
@@ -205,4 +205,145 @@
   width: 5rem !important;
   height: 3rem !important;
   /* object-fit: cover; */
+}
+
+/* responsive */
+@media (max-width: 1200px) {
+  .main-footer {
+    padding: 5rem 5rem 0 5rem;
+  }
+
+  .footer-top {
+    gap: 5rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .footer-top-left {
+    width: 100%;
+  }
+
+  .footer-top-left h1 {
+    font-size: 2.5rem;
+  }
+
+  .footer-mid-more-info p {
+    width: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-footer {
+    padding: 3rem 2rem 0 2rem;
+  }
+
+  .footer-top {
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .footer-top-left {
+    width: 100%;
+    gap: 0.8rem;
+  }
+
+  .footer-top-left h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-top-left-child {
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 1rem;
+  }
+
+  .footer-top-right {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .footer-mid {
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 2.5rem 0;
+  }
+
+  .footer-mid-more-info {
+    flex: 1 1 calc(50% - 1rem);
+    min-width: 0;
+  }
+
+  .footer-bot {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-footer {
+    padding: 2rem 1rem 0 1rem;
+  }
+
+  .footer-top {
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .footer-top-left h1 {
+    font-size: 1.5rem;
+  }
+
+  .footer-top-left h5 {
+    font-size: 0.85rem;
+  }
+
+  .footer-top-left-desc {
+    font-size: 0.85rem;
+    line-height: 1.5rem;
+  }
+
+  .footer-top-right {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .footer-mid {
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .footer-mid-more-info {
+    flex: 1 1 100%;
+    min-width: 0;
+  }
+
+  .footer-mid-more-info h5 {
+    font-size: 0.95rem;
+  }
+
+  .footer-mid-more-info p {
+    font-size: 0.85rem;
+    width: auto;
+  }
+
+  .logo-slogan img,
+  .logo-slogan-img {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .logo-slogan-text h5 {
+    font-size: 0.95rem;
+  }
+
+  .logo-slogan-text p {
+    font-size: 0.7rem;
+  }
+
+  .footer-bot {
+    font-size: 0.85rem;
+    gap: 1rem;
+  }
 }

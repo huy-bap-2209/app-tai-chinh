@@ -144,8 +144,10 @@
 
 .offers-img {
   position: relative;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   overflow: hidden;
+  width: 100%;
+  aspect-ratio: 9 / 3;
 }
 
 .offers-img img {
@@ -156,48 +158,201 @@
 
 .offers-img-desc {
   position: absolute;
-  top: 25%;
-  left: 5%;
-  width: 50%;
+  top: 50%;
+  left: 4%;
+  /* right: 10%; */
+  transform: translateY(-50%);
+  /* width: 55%; */
+  max-width: 55%;
   color: #fff;
   text-align: left;
 }
 
 .offers-img-desc h5 {
   color: #00ffa2;
-  font-size: 0.8rem;
-  margin-bottom: 1rem;
+  font-size: clamp(0.7rem, 1.5vw, 1rem);
+  margin-bottom: clamp(0.6rem, 1vw, 1rem);
 }
 
 .offers-img-desc h1 {
-  font-size: 2.6rem;
-  margin-bottom: 1rem;
-  line-height: 3.2rem;
+  font-size: clamp(1.5rem, 4vw, 2.8rem);
+  margin-bottom: clamp(0.6rem, 1vw, 1rem);
+  line-height: 1.2;
 }
 
 .offers-img-desc h3 {
-  font-size: 1rem;
-  margin-top: 2rem;
+  font-size: clamp(0.75rem, 1.5vw, 1.1rem);
+  margin-top: clamp(1rem, 1.8vw, 1.5rem);
 }
 
 .offers-img-desc h1 span {
   color: #000;
   background-color: #fff;
-  padding: 4px;
+  padding: clamp(3px, 0.5vw, 6px);
 }
 
 .offers-img-desc button {
   display: flex;
   border: none;
-  padding: 10px 16px;
+  padding: clamp(7px, 0.9vw, 12px) clamp(11px, 1.3vw, 14px);
   border-radius: 25px;
   background-color: #1ad08c;
   color: #fff;
-  margin-top: 2rem;
+  margin-top: clamp(1rem, 1.8vw, 1.5rem);
+  font-size: clamp(0.7rem, 1.3vw, 0.9rem);
+  cursor: pointer;
 }
 
 .offers-img button img {
   width: 1rem;
   height: 1rem;
   margin-left: 0.5rem;
+}
+
+/* responsive */
+@media (max-width: 1200px) {
+  .offers-container {
+    padding: 3rem 5rem;
+    gap: 2rem;
+  }
+
+  .offers-container-list {
+    flex: 1 1 calc(50% - 1rem);
+    min-width: 0;
+  }
+
+  .offers-container-header {
+    padding: 2rem 0;
+  }
+
+  .offers-container-header-btn {
+    width: auto;
+    margin-right: 0;
+  }
+
+  .offers-img-desc {
+    left: 6%;
+    max-width: 55%;
+  }
+
+  .offers-img-desc h1 {
+    font-size: clamp(1.5rem, 3.8vw, 2.6rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .offers-container-header {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+  }
+
+  .offers-container-header h1 {
+    font-size: 2.2rem;
+    line-height: 2.6rem;
+  }
+
+  .offers-container-header-btn {
+    width: 100%;
+  }
+
+  .offers-container {
+    flex-wrap: wrap;
+    padding: 2rem 2rem;
+    gap: 1.5rem;
+  }
+
+  .offers-container-list {
+    flex: 1 1 calc(50% - 0.75rem);
+    padding: 2rem 1.5rem;
+    min-width: 0;
+  }
+
+  .offers-img {
+    aspect-ratio: 16 / 10;
+    margin-top: 1.2rem;
+  }
+
+  .offers-img-desc {
+    left: 5%;
+    max-width: 70%;
+  }
+
+  .offers-img-desc h1 {
+    font-size: clamp(1.4rem, 3.5vw, 2rem);
+  }
+
+  .offers-img-desc h5 {
+    font-size: clamp(0.65rem, 1.3vw, 0.85rem);
+  }
+
+  .offers-img-desc h3 {
+    font-size: clamp(0.7rem, 1.2vw, 0.95rem);
+  }
+
+  .offers-img-desc button {
+    font-size: clamp(0.65rem, 1.1vw, 0.8rem);
+  }
+}
+
+@media (max-width: 600px) {
+  .offers-container-header {
+    padding: 1rem 0;
+  }
+
+  .offers-container-header h1 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .offers-container {
+    flex-direction: column;
+    padding: 1.5rem 1rem;
+    gap: 1rem;
+  }
+
+  .offers-container-list {
+    flex: 1 1 100%;
+    padding: 1.5rem 1rem;
+  }
+
+  .offers-card-header {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .offers-card-title h5 {
+    font-size: 1rem;
+  }
+
+  .offers-img {
+    aspect-ratio: 16 / 11;
+    margin-top: 1rem;
+  }
+
+  .offers-img-desc {
+    left: 5%;
+    max-width: 80%;
+  }
+
+  .offers-img-desc h5 {
+    font-size: clamp(0.6rem, 2vw, 0.75rem);
+    margin-bottom: clamp(0.4rem, 1vw, 0.6rem);
+  }
+
+  .offers-img-desc h1 {
+    font-size: clamp(1.2rem, 3.5vw, 1.8rem);
+    margin-bottom: clamp(0.4rem, 1vw, 0.6rem);
+  }
+
+  .offers-img-desc h3 {
+    font-size: clamp(0.65rem, 1.5vw, 0.8rem);
+    margin-top: clamp(0.7rem, 1.2vw, 0.9rem);
+  }
+
+  .offers-img-desc button {
+    padding: clamp(5px, 0.7vw, 8px) clamp(8px, 1vw, 10px);
+    font-size: clamp(0.6rem, 1.5vw, 0.75rem);
+    margin-top: clamp(0.7rem, 1.2vw, 0.9rem);
+  }
 }

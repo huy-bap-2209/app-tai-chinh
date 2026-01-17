@@ -1,6 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
 .promo-container {
+  width: 100%;
   padding: 4rem 10rem;
   font-family: system-ui, sans-serif;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .promo-header {
@@ -22,6 +39,23 @@
   margin: 2rem 0;
   border: none;
   border-top: 2px solid #eee;
+}
+
+.promo-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.promo-nav button {
+  cursor: pointer;
+  background-color: #2563eb;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  color: #fff;
+  border: none;
+  justify-content: flex-end;
 }
 
 .promo-grid {
@@ -74,5 +108,134 @@
 }
 
 .promo-code button:hover {
-  background: #2563eb
+  background: #2563eb;
+}
+
+/* responsive */
+@media (max-width: 1200px) {
+  .promo-container {
+    padding: 3rem 4rem;
+  }
+
+  .promo-container h1 {
+    font-size: 1.8rem;
+  }
+
+  .promo-grid {
+    gap: 1.5rem;
+  }
+
+  .promo-card {
+    flex: 1 1 calc(50% - 0.75rem);
+    min-width: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .promo-container {
+    padding: 2rem 1.5rem;
+    width: 100%;
+    margin: 0;
+  }
+
+  .promo-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .promo-container h4 {
+    font-size: 0.9rem;
+  }
+
+  .promo-nav {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .promo-nav button {
+    flex: 1 1 calc(50% - 0.5rem);
+    padding: 0.6rem 1rem;
+    font-size: 0.75rem;
+  }
+
+  .promo-grid {
+    gap: 1.2rem;
+  }
+
+  .promo-card {
+    flex: 1 1 calc(50% - 0.6rem);
+    padding: 1.2rem;
+  }
+
+  .promo-card h3 {
+    font-size: 1rem;
+  }
+
+  .promo-desc {
+    font-size: 0.85rem;
+  }
+
+  .promo-code {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+
+  .promo-code button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .promo-container {
+    padding: 1.5rem 1rem;
+    width: 100%;
+    margin: 0;
+  }
+
+  .promo-container h1 {
+    font-size: 1.3rem;
+    margin-top: 0.3rem;
+  }
+
+  .promo-container h4 {
+    font-size: 0.85rem;
+  }
+
+  .promo-nav {
+    gap: 0.8rem;
+  }
+
+  .promo-nav button {
+    flex: 1 1 calc(50% - 0.4rem);
+    padding: 0.5rem 0.8rem;
+    font-size: 0.7rem;
+  }
+
+  .promo-grid {
+    gap: 1rem;
+    flex-direction: column;
+  }
+
+  .promo-card {
+    flex: 1 1 100%;
+    padding: 1rem;
+  }
+
+  .promo-card h3 {
+    font-size: 0.95rem;
+  }
+
+  .promo-desc {
+    font-size: 0.8rem;
+  }
+
+  .promo-code {
+    padding: 0.4rem;
+    font-size: 0.85rem;
+  }
+
+  .promo-code button {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+  }
 }

@@ -29,8 +29,7 @@
   padding: 0.5rem 1rem;
   border-radius: 4px;
   font-weight: bold;
-  font-size: .8rem
-  ;
+  font-size: 0.8rem;
 }
 
 .bankinfo-items {
@@ -100,4 +99,168 @@
 
 .btn-details:hover {
   background: #2563eb;
+}
+
+/* Tablet - 1200px */
+@media (max-width: 1200px) {
+  .bankinfo-container {
+    padding: 3rem 6rem;
+  }
+
+  .bankinfo-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .bankinfo-grid {
+    gap: 1.5rem;
+  }
+
+  .bankinfo-card {
+    flex: 1 1 200px;
+    padding: 1.2rem;
+  }
+}
+
+/* Tablet - 768px */
+@media (max-width: 768px) {
+  .bankinfo-container {
+    padding: 2rem 3rem;
+  }
+
+  .bankinfo-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .bankinfo-header p {
+    font-size: 0.95rem;
+  }
+
+  .bankinfo-tabs {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .home-link {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.7rem;
+    align-self: flex-start;
+  }
+
+  .bankinfo-items {
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+
+  .bankinfo-items button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+  }
+
+  .bankinfo-grid {
+    gap: 1.2rem;
+  }
+
+  .bankinfo-card {
+    flex: 1 1 calc(50% - 0.6rem);
+    padding: 1rem;
+  }
+}
+
+/* Mobile - 600px */
+@media (max-width: 600px) {
+  .bankinfo-container {
+    padding: 1.5rem 1.5rem;
+  }
+
+  .bankinfo-header h5 {
+    font-size: 0.85rem;
+  }
+
+  .bankinfo-header h1 {
+    font-size: 1.2rem;
+    margin-top: 0.3rem;
+  }
+
+  .bankinfo-header p {
+    font-size: 0.9rem;
+    margin-top: 0.3rem;
+  }
+
+  .home-link {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.65rem;
+  }
+
+  .bankinfo-items {
+    gap: 0.5rem;
+  }
+
+  .bankinfo-items button {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.75rem;
+  }
+
+  .bankinfo-grid {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .bankinfo-card {
+    flex: 1 1 100%;
+    padding: 0.8rem;
+  }
+
+  .bank-desc {
+    font-size: 0.9rem;
+  }
+
+  .btn-details {
+    padding: 0.4rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* Small Mobile - 400px */
+@media (max-width: 400px) {
+  .bankinfo-container {
+    padding: 1rem 1rem;
+  }
+
+  .bankinfo-header h5 {
+    font-size: 0.8rem;
+  }
+
+  .bankinfo-header h1 {
+    font-size: 1rem;
+  }
+
+  .bankinfo-header p {
+    font-size: 0.85rem;
+  }
+
+  .home-link {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.6rem;
+  }
+
+  .bankinfo-items button {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.7rem;
+  }
+
+  .bankinfo-card {
+    padding: 0.6rem;
+  }
+
+  .bank-desc {
+    font-size: 0.85rem;
+    margin: 0.3rem 0;
+  }
+
+  .btn-details {
+    padding: 0.3rem;
+    font-size: 0.75rem;
+    margin-top: 0.8rem;
+  }
 }

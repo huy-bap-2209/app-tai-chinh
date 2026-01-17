@@ -1,10 +1,35 @@
 import { useState, useEffect } from "react";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import "./LoanModal.css";
 
 function LoanModal({ isOpen, onClose, bankName }) {
   const [amount, setAmount] = useState(10000000);
   const [months, setMonths] = useState(12);
   const [cycle, setCycle] = useState("chọn chu kỳ");
+
+  const navigate = useNavigate();
+
+  const handleGoPromo = () => {
+    navigate("/promo_page", {
+      state: {
+        from: "loan-modal",
+        bankName,
+        scrollY: window.scrollY,
+      },
+    });
+  };
+
+  const handleBack = () => {
+    if (bankName) {
+      navigate(`/bank_info?bank=${bankName}`);
+    } else {
+      navigate("/");
+    }
+  };
+
+  // const handlePromoClick = () => {
+  //   navigate(`/promo_page?bank=${bankName}`);
+  // };
 
   //chặn scroll
   useEffect(() => {
@@ -112,12 +137,19 @@ function LoanModal({ isOpen, onClose, bankName }) {
 
         {/* Footer */}
         <div className="loan-modal-footer">
-          <button className="btn-cancel" onClick={onClose}>
-            Hủy
-          </button>
-          <button className="btn-submit" type="submit">
-            Gửi đăng ký
-          </button>
+          <div className="btn-offers-nav">
+            <button className="btn-offers" onClick={handleGoPromo}>
+              {bankName ? "Ưu đãi" : "Quay lại ..."}
+            </button>
+          </div>
+          <div className="btn-submit-cancel">
+            <button className="btn-cancel" onClick={onClose}>
+              Hủy
+            </button>
+            <button className="btn-submit" type="submit">
+              Gửi đăng ký
+            </button>
+          </div>
         </div>
       </div>
     </div>

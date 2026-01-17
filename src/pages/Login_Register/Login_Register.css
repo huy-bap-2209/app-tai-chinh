@@ -186,7 +186,7 @@
 }
 
 .btn-login {
-  width: 100%;
+  flex: 1;
   padding: 0.8rem;
   border: none;
   border-radius: 50px;
@@ -196,6 +196,7 @@
   cursor: pointer;
   box-shadow: 0 4px 12px rgb(90, 244, 38);
   transition: all 0.3s ease;
+  font-size: 1rem;
 }
 
 .btn-login:hover {
@@ -204,11 +205,30 @@
 
 .back-home-page-btn-login {
   display: flex;
+  gap: 0.8rem;
+  width: 100%;
   align-items: center;
+  margin-top: 1.5rem;
 }
 
 .back-home-page-btn-login a {
-  width: 35rem;
+  flex: 1;
+  padding: 0.8rem;
+  border-radius: 50px;
+  border: 2px solid #5af426;
+  color: #5af426;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  font-size: 1rem;
+}
+
+.back-home-page-btn-login a:hover {
+  background-color: #5af426;
+  color: #fff;
 }
 
 /* Responsive */
@@ -216,6 +236,9 @@
   .login-register-wrapper {
     flex-direction: column;
     min-height: auto;
+    width: 90%;
+    max-width: none;
+    margin: 10% auto;
   }
 
   .login-register-left,
@@ -230,19 +253,88 @@
   }
 
   .login-form {
-    width: 90%;
-    max-width: 400px;
-    padding: 2rem;
+    width: 100%;
+    max-width: 100%;
+    padding: 2rem 1.5rem;
+  }
+
+  .login-form h2 {
+    font-size: 2.5rem;
+  }
+
+  .login-form p {
+    font-size: 0.85rem;
   }
 
   .login-options {
     flex-direction: column;
     align-items: flex-start;
+    gap: 0.8rem;
   }
 
   .back-home-page-btn-login {
-    display: flex;
     flex-direction: column;
     gap: 1rem;
+    width: 100%;
+  }
+
+  .back-home-page-btn-login a {
+    width: 100%;
+    flex: none;
+  }
+
+  .btn-login {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .login-register-wrapper {
+    width: 95%;
+    margin: 20% auto;
+    border-radius: 20px;
+  }
+
+  .login-form {
+    padding: 1.5rem 1rem;
+  }
+
+  .login-form h2 {
+    font-size: 2rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .login-form p {
+    font-size: 0.8rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .login-form input {
+    padding: 0.7rem;
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+  }
+
+  .remember-checkbox {
+    gap: 0.2rem;
+  }
+
+  .remember-checkbox label {
+    font-size: 0.75rem;
+  }
+
+  .login-options {
+    font-size: 0.75rem;
+  }
+
+  .back-home-page-btn-login a {
+    padding: 0.7rem;
+    font-size: 0.85rem;
+    border-width: 1.5px;
+  }
+
+  .btn-login {
+    padding: 0.7rem;
+    font-size: 0.85rem;
   }
 }
