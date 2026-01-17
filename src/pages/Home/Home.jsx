@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./Home.css";
 
 // import searchIcon from "../../images/search-icon.svg";
@@ -20,6 +20,11 @@ import Testimoney from "../../components/testimoney/testimoney";
 import Carousel from "../../components/carousel/Carousel";
 
 function Home() {
+  const categoryRef = useRef(null);
+
+  const scrollToCategory = () => {
+    categoryRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <>
       <div className="home-container">
@@ -45,11 +50,11 @@ function Home() {
               className="home-container-content-btn-img"
             />
           </button>
-          <div className="home-navigation">
+          {/* <div className="home-navigation">
             <a href="">QUAY LẠI</a>
             <hr />
             <a href="">TIẾP THEO</a>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="home-feature">
@@ -102,8 +107,8 @@ function Home() {
         </div>
       </div>
 
-      <Offers />
-      <CategoryOffers />
+      <Offers scrollToCategory={scrollToCategory} categoryRef={categoryRef} />
+      <CategoryOffers ref={categoryRef} />
       <Discount />
       <Testimoney />
       <Carousel />

@@ -1,4 +1,3 @@
-import React from "react";
 import "./Offers.css";
 
 import agribankLogo from "../../images/agribank-icon.png";
@@ -13,7 +12,7 @@ import timeWorkingIcon from "../../images/time.svg";
 import offersImg from "../../images/offers-img.jpg";
 import rightArrowIcon from "../../images/right-arrow-icon.svg";
 
-function Offers() {
+function Offers({ scrollToCategory }) {
   return (
     <>
       <div className="offers-container">
@@ -31,7 +30,10 @@ function Offers() {
             </p>
           </div>
 
-          <button className="offers-container-header-btn">
+          <button
+            className="offers-container-header-btn"
+            onClick={scrollToCategory}
+          >
             Chọn theo danh mục
           </button>
         </div>
@@ -67,8 +69,8 @@ function Offers() {
             chính của họ.
           </p>
           <div className="offers-card-btn">
-            <button>Nhận khoản vay</button>
-            <button>Thông tin</button>
+            <button onClick={scrollToCategory}>Nhận khoản vay</button>
+            <button onClick={scrollToCategory}>Thông tin</button>
           </div>
         </div>
         <div className="offers-container-list">
@@ -105,8 +107,8 @@ function Offers() {
             cần trả tiền cho học kỳ tiếp theo.
           </p>
           <div className="offers-card-btn">
-            <button>Nhận khoản vay</button>
-            <button>Thông tin</button>
+            <button onClick={scrollToCategory}>Nhận khoản vay</button>
+            <button onClick={scrollToCategory}>Thông tin</button>
           </div>
         </div>
         <div className="offers-container-list">
@@ -144,8 +146,8 @@ function Offers() {
             mà không lo về lãi suất.
           </p>
           <div className="offers-card-btn">
-            <button>Nhận khoản vay</button>
-            <button>Thông tin</button>
+            <button onClick={scrollToCategory}>Nhận khoản vay</button>
+            <button onClick={scrollToCategory}>Thông tin</button>
           </div>
         </div>
         <div className="offers-container-list">
@@ -179,8 +181,8 @@ function Offers() {
             coi là rủi ro cao.
           </p>
           <div className="offers-card-btn">
-            <button>Nhận khoản vay</button>
-            <button>Thông tin</button>
+            <button onClick={scrollToCategory}>Nhận khoản vay</button>
+            <button onClick={scrollToCategory}>Thông tin</button>
           </div>
         </div>
         <div className="offers-container-list">
@@ -214,8 +216,8 @@ function Offers() {
             có lãi suất tối.
           </p>
           <div className="offers-card-btn">
-            <button>Nhận khoản vay</button>
-            <button>Thông tin</button>
+            <button onClick={scrollToCategory}>Nhận khoản vay</button>
+            <button onClick={scrollToCategory}>Thông tin</button>
           </div>
         </div>
         <div className="offers-container-list">
@@ -248,17 +250,23 @@ function Offers() {
             phải ăn mỳ tôm.
           </p>
           <div className="offers-card-btn">
-            <button>Nhận khoản vay</button>
-            <button>Thông tin</button>
+            <button onClick={scrollToCategory}>Nhận khoản vay</button>
+            <button onClick={scrollToCategory}>Thông tin</button>
           </div>
         </div>
         <div className="offers-img">
           <img src={offersImg} alt="" />
           <div className="offers-img-desc">
             <h5>CÁC LỰA CHỌN VAY</h5>
-            <h1>Chúng tôi chỉ hợp tác với những <span> Ngân Hàng Tốt Nhất</span> </h1>
-            <h3>Nhận ngay các ưu đãi tốt nhất từ các đối tác của chúng tôi ! </h3>
-            <button>xem thêm
+            <h1>
+              Chúng tôi chỉ hợp tác với những{" "}
+              <span> Ngân Hàng Tốt Nhất</span>{" "}
+            </h1>
+            <h3>
+              Nhận ngay các ưu đãi tốt nhất từ các đối tác của chúng tôi !{" "}
+            </h3>
+            <button>
+              xem thêm
               <img src={rightArrowIcon} alt="" className="offers-right-arrow" />
             </button>
           </div>

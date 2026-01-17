@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import "./Discount.css";
 
 import loanVideo from "../../videos/loans-video.mp4";
@@ -28,7 +29,7 @@ function Discount() {
       },
       // 50% video xuất hiện thì chạy isIntersecting = true
       // k đủ 50% k chạy isIntersecting = false
-      { threshold: 0.5 }
+      { threshold: 0.5 },
     );
 
     if (videoRef.current) {
@@ -53,7 +54,7 @@ function Discount() {
       <hr />
       <p className="discount-container-title">
         Nếu bạn chưa bao giờ sử dụng dịch vụ của chúng tôi, bạn có thể nhận được
-        một <a>mã khuyến mãi</a> đặc biệt để được{" "}
+        một <Link to="/promo_page">mã khuyến mãi</Link> đặc biệt để được{" "}
         <strong>giảm giá từ 5 đến 15%</strong> khi đăng ký khoản vay từ một
         trong các đối tác của chúng tôi. Bạn sẽ tìm thấy một số mã khuyến mãi
         bên dưới hoặc bạn có thể lấy chúng bằng cách liên hệ với bộ phận hỗ trợ

@@ -101,14 +101,14 @@
   color: #1ad08c;
 }
 
-.offers-actions button:last-child {
+.offers-actions a:last-child {
   color: #6b7280;
 }
 
 .btn-underline {
   background: none;
   border: none;
-  color: #2563eb;
+  /* color: #2563eb; */
   cursor: pointer;
   font-size: 0.8rem;
   text-decoration: underline;

@@ -1,0 +1,78 @@
+.promo-container {
+  padding: 4rem 10rem;
+  font-family: system-ui, sans-serif;
+}
+
+.promo-header {
+  color: #2563eb;
+  font-weight: bold;
+}
+
+.promo-container h1 {
+  margin-top: 0.5rem;
+  font-size: 2rem;
+}
+
+.promo-container h4 {
+  margin-top: 0.5rem;
+  color: #555;
+}
+
+.promo-container hr {
+  margin: 2rem 0;
+  border: none;
+  border-top: 2px solid #eee;
+}
+
+.promo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.promo-card {
+  background: #f9f9f9;
+  padding: 1.5rem;
+  flex: 1 1 250px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.promo-card h3 {
+  margin: 0;
+  color: #333;
+}
+
+.promo-desc {
+  font-style: italic;
+  color: #777;
+  margin: 0.5rem 0;
+}
+
+.promo-code {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background: #eee;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.promo-code button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 0.3rem 0.7rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.promo-code button:hover {
+  background: #2563eb
+}
