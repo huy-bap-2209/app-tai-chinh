@@ -17,6 +17,7 @@ import Footer from "../../components/footer/Footer";
 import CategoryOffers from "../../components/categoryOffers/CategoryOffers";
 import Discount from "../../components/discount/Discount";
 import Testimoney from "../../components/testimoney/testimoney";
+import Carousel from "../../components/carousel/Carousel";
 
 function Home() {
   return (
@@ -105,6 +106,7 @@ function Home() {
       <CategoryOffers />
       <Discount />
       <Testimoney />
+      <Carousel />
       <Footer />
     </>
   );
