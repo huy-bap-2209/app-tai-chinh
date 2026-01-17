@@ -2,9 +2,9 @@ import React from "react";
 import "./Testimoney.css";
 
 import logoWeb from "../../images/logo_web.png";
-import hieuNgo from '../../images/hieu-bap-img.jpg'
-import thanhNgo from '../../images/thanh-bap-img.jpg'
-import vuongPham from '../../images/vuong-pham-img.jpg'
+import hieuNgo from "../../images/hieu-bap-img.jpg";
+import thanhNgo from "../../images/thanh-bap-img.jpg";
+import vuongPham from "../../images/vuong-pham-img.jpg";
 
 function Testimoney() {
   return (
@@ -29,60 +29,47 @@ function Testimoney() {
         </div>
       </div>
       <div className="testimoney-list">
-        <div className="testimoney-item">
-          <div className="testimoney-item-img">
-            <img src={hieuNgo} alt="" />
-          </div>
-          <div className="testimoney-item-name">
-            <h3>Ngô Quang Hiếu</h3>
-            <hr />
-            <p>
-              "Cảm ơn quý công ty đã hỗ trợ cho khoản vay cuẩ tôi với mục đích
-              mua nhà. Khoản vay của tôi rất hợp lý trong bối cảnh thời đại kinh
-              tế khủng hoảng với lãi suất cao từ các ngân hàng địa phương, tuy
-              nhiên BẮP TÀI CHÍNH có những ưu đãi rất tốt đối với các khoản vay
-              tiêu dùng cá nhân."
-            </p>
-            <p>NGÀY 29 THÁNG 12, 2025</p>
-          </div>
-        </div>
-        <div className="testimoney-item">
-          <div className="testimoney-item-img">
-            <img src={thanhNgo} alt="" />
-          </div>
-          <div className="testimoney-item-name">
-            <h3>Ngô Quang Hiếu</h3>
-            <hr />
-            <p>
-              "Cảm ơn quý công ty đã hỗ trợ cho khoản vay cuẩ tôi với mục đích
-              mua nhà. Khoản vay của tôi rất hợp lý trong bối cảnh thời đại kinh
-              tế khủng hoảng với lãi suất cao từ các ngân hàng địa phương, tuy
-              nhiên BẮP TÀI CHÍNH có những ưu đãi rất tốt đối với các khoản vay
-              tiêu dùng cá nhân."
-            </p>
-            <p>NGÀY 29 THÁNG 12, 2025</p>
-          </div>
-        </div>
-        <div className="testimoney-item">
-          <div className="testimoney-item-img">
-            <img src={vuongPham} alt="" />
-          </div>
-          <div className="testimoney-item-name">
-            <h3>Ngô Quang Hiếu</h3>
-            <hr />
-            <p>
-              "Cảm ơn quý công ty đã hỗ trợ cho khoản vay cuẩ tôi với mục đích
-              mua nhà. Khoản vay của tôi rất hợp lý trong bối cảnh thời đại kinh
-              tế khủng hoảng với lãi suất cao từ các ngân hàng địa phương, tuy
-              nhiên BẮP TÀI CHÍNH có những ưu đãi rất tốt đối với các khoản vay
-              tiêu dùng cá nhân."
-            </p>
-            <p>NGÀY 29 THÁNG 12, 2025</p>
-          </div>
-        </div>
+        <TestimoneyItem
+          name="Ngô Quang Hiếu"
+          date="29 Tháng 12, 2025"
+          image={hieuNgo}
+          content="Cảm ơn quý công ty đã hỗ trợ cho khoản vay của tôi với mục đích mua nhà. Khoản vay của tôi rất hợp lý trong bối cảnh thời đại kinh tế khủng hoảng với lãi suất cao từ các ngân hàng địa phương, tuy nhiên BẮP TÀI CHÍNH có những ưu đãi rất tốt đối với các khoản vay tiêu dùng cá nhân."
+        />
+        <TestimoneyItem
+          name="Nguyễn Văn Thành"
+          date="29 Tháng 12, 2025"
+          image={thanhNgo}
+          content="Cảm ơn quý công ty đã hỗ trợ cho khoản vay của tôi với mục đích mua nhà. Khoản vay của tôi rất hợp lý trong bối cảnh thời đại kinh tế khủng hoảng với lãi suất cao từ các ngân hàng địa phương, tuy nhiên BẮP TÀI CHÍNH có những ưu đãi rất tốt đối với các khoản vay tiêu dùng cá nhân."
+        />
+        <TestimoneyItem
+          name="Phạm Văn Vương"
+          date="29 Tháng 12, 2025"
+          image={vuongPham}
+          content="Cảm ơn quý công ty đã hỗ trợ cho khoản vay của tôi với mục đích mua nhà. Khoản vay của tôi rất hợp lý trong bối cảnh thời đại kinh tế khủng hoảng với lãi suất cao từ các ngân hàng địa phương, tuy nhiên BẮP TÀI CHÍNH có những ưu đãi rất tốt đối với các khoản vay tiêu dùng cá nhân."
+        />
       </div>
     </div>
   );
 }
 
 export default Testimoney;
+
+const TestimoneyItem = ({ name, date, image, content }) => {
+  return (
+    <div className="testimoney-item">
+      <div className="testimoney-quote-icon">"</div>
+      <div className="testimoney-item-content">
+        <p className="testimoney-text">{content}</p>
+        <div className="testimoney-item-footer">
+          <div className="testimoney-item-img">
+            <img src={image} alt={name} />
+          </div>
+          <div className="testimoney-item-info">
+            <h3>{name}</h3>
+            <p className="testimoney-date">{date}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};

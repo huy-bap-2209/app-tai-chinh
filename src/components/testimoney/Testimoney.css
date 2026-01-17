@@ -79,14 +79,117 @@
 }
 
 .testimoney-list {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 4rem;
 }
 
 .testimoney-item {
-text-align: left;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  position: relative;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.testimoney-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.testimoney-quote-icon {
+  font-size: 4rem;
+  color: #2563eb;
+  opacity: 0.2;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 1rem;
+  font-family: Georgia, serif;
+}
+
+.testimoney-item-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.testimoney-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #4b5563;
+  margin-bottom: 2rem;
+  flex-grow: 1;
+  font-style: italic;
+}
+
+.testimoney-item-footer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: auto;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.testimoney-item-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 3px solid #e5e7eb;
+  transition: all 0.3s ease;
+}
+
+.testimoney-item:hover .testimoney-item-img {
+  border-color: #2563eb;
+  transform: scale(1.05);
 }
 
 .testimoney-item-img img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+}
+
+.testimoney-item-info {
+  flex-grow: 1;
+}
+
+.testimoney-item-info h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 0.25rem 0;
+}
+
+.testimoney-date {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+@media (max-width: 1200px) {
+  .testimoney-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .testimoney-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .testimoney-item {
+    padding: 2rem;
+  }
 }
