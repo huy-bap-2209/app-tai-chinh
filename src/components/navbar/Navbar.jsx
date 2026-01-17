@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 import logoWeb from "../../images/logo_web.png";
@@ -50,9 +51,9 @@ function Navbar() {
           </nav>
 
           <div className="header-container-navbar-login-register">
-            <a href="/login_register">Đăng Ký</a>
+            <Link to="/login_register">Đăng Ký</Link>
             <hr />
-            <a href="/login_register">Đăng Nhập</a>
+            <Link to="/login_register">Đăng Nhập</Link>
           </div>
         </nav>
       </header>
