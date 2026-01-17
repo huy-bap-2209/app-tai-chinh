@@ -13,6 +13,8 @@
   width: 500px;
   border-radius: 12px;
   overflow: hidden;
+  max-height: 90vh;
+  overflow-y: auto;
 }
 
 .loan-modal-header {
@@ -101,4 +103,205 @@
 
 .no-scroll {
   overflow: hidden;
+}
+
+/* Tablet - 1200px */
+@media (max-width: 1200px) {
+  .loan-modal {
+    width: 450px;
+    max-height: 85vh;
+  }
+
+  .loan-modal-header {
+    padding: 14px;
+  }
+
+  .loan-modal-body {
+    padding: 14px;
+  }
+
+  .loan-modal-footer {
+    padding: 14px;
+  }
+}
+
+/* Tablet - 768px */
+@media (max-width: 768px) {
+  .loan-modal {
+    width: 90%;
+    max-width: 400px;
+    max-height: 80vh;
+  }
+
+  .loan-modal-header h2 {
+    font-size: 1.3rem;
+  }
+
+  .loan-modal-header {
+    padding: 12px;
+  }
+
+  .loan-modal-body {
+    padding: 12px;
+  }
+
+  .form-group {
+    margin-bottom: 10px;
+  }
+
+  .form-group input,
+  .form-group select {
+    padding: 7px;
+    font-size: 14px;
+  }
+
+  .loan-summary {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  .loan-modal-footer {
+    padding: 12px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .btn-offers {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+
+  .btn-cancel {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+
+  .btn-submit {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Mobile - 600px */
+@media (max-width: 600px) {
+  .loan-modal {
+    width: 95%;
+    max-width: 360px;
+    max-height: 75vh;
+  }
+
+  .loan-modal-header h2 {
+    font-size: 1.1rem;
+  }
+
+  .close-btn {
+    font-size: 20px;
+  }
+
+  .loan-modal-header {
+    padding: 10px;
+  }
+
+  .loan-modal-body {
+    padding: 10px;
+  }
+
+  .form-group {
+    margin-bottom: 8px;
+  }
+
+  .form-group label {
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+  }
+
+  .form-group input,
+  .form-group select {
+    padding: 6px;
+    font-size: 13px;
+  }
+
+  .loan-summary {
+    padding: 6px;
+    font-size: 0.85rem;
+  }
+
+  .loan-modal-footer {
+    padding: 10px;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .btn-offers-nav {
+    width: 100%;
+  }
+
+  .btn-submit-cancel {
+    width: 100%;
+    gap: 6px;
+  }
+
+  .btn-offers,
+  .btn-cancel,
+  .btn-submit {
+    flex: 1;
+    padding: 8px 10px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Small Mobile - 400px */
+@media (max-width: 400px) {
+  .loan-modal {
+    width: 98%;
+    max-height: 70vh;
+  }
+
+  .loan-modal-header h2 {
+    font-size: 1rem;
+  }
+
+  .close-btn {
+    font-size: 18px;
+  }
+
+  .loan-modal-header {
+    padding: 8px;
+  }
+
+  .loan-modal-body {
+    padding: 8px;
+  }
+
+  .form-group {
+    margin-bottom: 6px;
+  }
+
+  .form-group label {
+    font-size: 0.85rem;
+    margin-bottom: 3px;
+  }
+
+  .form-group input,
+  .form-group select {
+    padding: 5px;
+    font-size: 12px;
+  }
+
+  .loan-summary {
+    padding: 5px;
+    font-size: 0.8rem;
+  }
+
+  .loan-modal-footer {
+    padding: 8px;
+    gap: 4px;
+  }
+
+  .btn-offers,
+  .btn-cancel,
+  .btn-submit {
+    padding: 6px 8px;
+    font-size: 0.75rem;
+  }
 }
