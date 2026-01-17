@@ -16,7 +16,7 @@ import Offers from "../../components/offers/Offers";
 import Footer from "../../components/footer/Footer";
 import CategoryOffers from "../../components/categoryOffers/CategoryOffers";
 import Discount from "../../components/discount/Discount";
-import Testimoney from "../../components/testimoney/testimoney";
+import Testimoney from "../../components/testimoney/Testimoney";
 import Carousel from "../../components/carousel/Carousel";
 
 function Home() {
