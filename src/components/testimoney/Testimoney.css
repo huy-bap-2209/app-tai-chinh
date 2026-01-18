@@ -61,6 +61,7 @@
 }
 
 .testimoney-header-right-title {
+  margin-left: 1rem;
 }
 
 .testimoney-header-right-title h4 {
@@ -74,8 +75,16 @@
   margin-bottom: 0.4rem;
 }
 
-.testimoney-header-right-title span {
+.testimoney-header-right-title button {
   color: #1ad08c;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.testimoney-header-right-title button:hover {
+  color: #1ad08daf;
 }
 
 .testimoney-list {

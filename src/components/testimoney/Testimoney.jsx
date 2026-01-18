@@ -1,12 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Testimoney.css";
 
 import logoWeb from "../../images/logo_web.png";
 import hieuNgo from "../../images/hieu-bap-img.jpg";
 import thanhNgo from "../../images/thanh-bap-img.jpg";
 import vuongPham from "../../images/vuong-pham-img.jpg";
+import { Link } from "react-router-dom";
 
-function Testimoney() {
+import Feedback from "./feedback/Feedback";
+
+function Testimoney(props) {
+  const [popUp, setPopUp] = useState(false);
+
+  const handleOpenModal = () => {
+    setPopUp(true);
+  };
+
+  const handleClose = () => {
+    setPopUp(false);
+  };
   return (
     <div className="testimoney-container">
       <div className="testimoney-header">
@@ -24,7 +36,7 @@ function Testimoney() {
           <div className="testimoney-header-right-title">
             <h4>Bạn muốn để lại ý kiến?</h4>
             <p>Liên hệ với chúng tôi qua địa chỉ</p>
-            <span>CSKHbaptaichinh@gmail.com.vn</span>
+            <button onClick={handleOpenModal}>CSKHbaptaichinh@gmail.com.vn</button>
           </div>
         </div>
       </div>
@@ -48,6 +60,7 @@ function Testimoney() {
           content="Thật sự rất cảm ơn quý công ty đã đem lại cho tôi nhiều lợi ích lớn lao và trong đó lớn nhất đó chính là dự án startup của tôi, không những giải ngân nhanh mà các đối tác còn rất nhiệt tình tư vấn. Nếu có cơ hội tôi chắc chắn sẽ còn sử dụng dịch vụ của BẮP TÀI CHÍNH"
         />
       </div>
+      <Feedback isOpen={popUp} onClose={handleClose} />
     </div>
   );
 }

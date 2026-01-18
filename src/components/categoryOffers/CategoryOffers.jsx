@@ -9,22 +9,39 @@ const CategoryOffers = forwardRef((props, ref) => {
   const [activeTab, setActiveTab] = useState(1);
   const [popUp, setPopUp] = useState(false);
   const [selectedBank, setSelectedBank] = useState("");
+  const [hasProcessedState, setHasProcessedState] = useState(false);
 
   const location = useLocation();
 
+  // Reset modal khi component mount lần đầu
   useEffect(() => {
-    if (location.state?.scrollY !== undefined) {
-      window.scrollTo({
-        top: location.state.scrollY,
-        behavior: "instant",
-      });
-    }
+    setPopUp(false);
+    setSelectedBank("");
+    setHasProcessedState(false);
+  }, []);
 
-    if (location.state?.reopenLoan) {
-      setSelectedBank(location.state.bankName);
-      setPopUp(true);
+  useEffect(() => {
+    // Chỉ xử lý location.state một lần duy nhất
+    if (!hasProcessedState && location.state) {
+      if (location.state?.scrollY !== undefined) {
+        window.scrollTo({
+          top: location.state.scrollY,
+          behavior: "instant",
+        });
+      }
+
+      if (location.state?.reopenLoan && location.state?.bankName) {
+        setSelectedBank(location.state.bankName);
+        setPopUp(true);
+      }
+
+      // Đánh dấu đã xử lý state này để không xử lý lại lần nữa
+      setHasProcessedState(true);
+
+      // Clear location.state bằng cách navigate mà không state
+      window.history.replaceState({}, document.title, window.location.pathname);
     }
-  }, [location.state]);
+  }, [location.state, hasProcessedState]);
 
   const handleOpenModal = (bankName) => {
     setSelectedBank(bankName);
