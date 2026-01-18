@@ -205,6 +205,7 @@
 
 .back-home-page-btn-login {
   display: flex;
+  justify-content: space-between;
   gap: 0.8rem;
   width: 100%;
   align-items: center;
@@ -213,22 +214,21 @@
 
 .back-home-page-btn-login a {
   flex: 1;
-  padding: 0.8rem;
+  padding-right: 0.8rem;
   border-radius: 50px;
-  border: 2px solid #5af426;
-  color: #5af426;
+  /* border: 2px solid #5af426; */
+  /* color: #5af426; */
   text-decoration: none;
   text-align: center;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
+  /* transition: all 0.3s ease; */
   background-color: transparent;
   font-size: 1rem;
 }
 
 .back-home-page-btn-login a:hover {
-  background-color: #5af426;
-  color: #fff;
+  color: #777;
 }
 
 /* Responsive */

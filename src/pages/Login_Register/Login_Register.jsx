@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./Login_Register.css";
 // import LogoLogin from "../../images/logo_login.svg";
 import BackgroundLogin from "../../images/loan-img-3.jpg";
+import { Link } from "react-router-dom";
 
 function Login_Register() {
   const [isLoginRegister, setIsLoginRegister] = useState("Login");
@@ -85,7 +86,7 @@ function Login_Register() {
             )}
           </div>
           <div className="back-home-page-btn-login">
-            <a href="/">Quay lại Trang Chủ</a>
+            <Link to="/">Quay lại Trang Chủ</Link>
             <button type="submit" className="btn-login">
               {isLoginRegister}
             </button>
