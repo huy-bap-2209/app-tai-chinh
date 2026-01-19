@@ -9,13 +9,12 @@ function Navbar() {
   const [openSidebar, setOpenSidebar] = useState(false);
 
   //nhận biết trạng thái
-  const [loggedIn, setLoggedIn] = useState(false);
-  useEffect(() => {
-    setLoggedIn(localStorage.getItem("loggedIn") === "true");
-  }, []);
+  const [loggedIn, setLoggedIn] = useState(
+    localStorage.getItem("loggedIn") === "true",
+  );
 
   const handleLogout = () => {
-    localStorage.removeItem("LoggedIn");
+    localStorage.removeItem("loggedIn");
     window.location.reload();
   };
 
@@ -35,8 +34,8 @@ function Navbar() {
             <a href="#">Giới thiệu</a>
             <a href="#">Liên hệ</a>
             <div className="header-container-navbar-list">
-              <div
-                className={`header-container-header-more-product ${
+              <a
+                className={`header-container-profile ${
                   openSidebar ? "open" : ""
                 }`}
                 onClick={() => setOpenSidebar(!openSidebar)}
@@ -47,7 +46,7 @@ function Navbar() {
                   alt="Down Arrow"
                   className="header-container-navbar-icon"
                 /> */}
-              </div>
+              </a>
               {/* <img
                 src={searchIcon}
                 alt="Search"
@@ -72,7 +71,9 @@ function Navbar() {
               <>
                 <Link to="/profile">Xin chào👋 #userName </Link>
                 <hr />
-                <button onClick={handleLogout}>Đăng xuất</button>
+                <button className="btn-logout" onClick={handleLogout}>
+                  Đăng xuất
+                </button>
               </>
             )}
           </div>

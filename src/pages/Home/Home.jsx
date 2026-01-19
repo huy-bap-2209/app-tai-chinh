@@ -21,9 +21,14 @@ import Carousel from "../../components/carousel/Carousel";
 
 function Home() {
   const categoryRef = useRef(null);
+  const offersRef = useRef(null);
 
   const scrollToCategory = () => {
     categoryRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const scrollToOffers = () => {
+    offersRef.current?.scrollIntoView({ behavior: "smooth" });
   };
   return (
     <>
@@ -42,7 +47,10 @@ function Home() {
           <p className="home-container-content-desc">
             Các đối tác của chúng tôi sẽ phản hồi trong vòng 5 phút{" "}
           </p>
-          <button className="home-container-content-btn">
+          <button
+            className="home-container-content-btn"
+            onClick={scrollToOffers}
+          >
             VAY NGAY
             <img
               src={rightArrowIcon}
@@ -107,7 +115,11 @@ function Home() {
         </div>
       </div>
 
-      <Offers scrollToCategory={scrollToCategory} categoryRef={categoryRef} />
+      <Offers
+        scrollToCategory={scrollToCategory}
+        categoryRef={categoryRef}
+        ref={offersRef}
+      />
       <CategoryOffers ref={categoryRef} />
       <Discount />
       <Testimoney />

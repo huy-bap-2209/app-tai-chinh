@@ -58,13 +58,17 @@
   display: inline-block;
 }
 
-.header-container-header-more-product {
-  display: inline-flex; /* đặt text và ảnh thẳng hàng */
-  align-items: center; /* canh giữa theo chiều dọc */
-  gap: 0rem; /* khoảng cách giữa text và icon */
+/* .header-container-header-more-product {
+  display: inline-flex;
+  align-items: center; 
+  gap: 0rem; 
   cursor: pointer;
   padding: 0.25rem 0.5rem;
-  /* color: #1100ff; */
+  color: #1100ff;
+} */
+
+.header-container-profile {
+  cursor: pointer;
 }
 
 /* .header-container-navbar-login-register hr{
@@ -84,6 +88,27 @@
   display: flex;
   gap: 0.4rem;
   margin-left: -10rem;
+}
+
+.btn-logout {
+  padding: 0.2rem 0.8rem;
+  border: none;
+  color: #fff;
+  background: #2563eb;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+}
+
+.btn-logout:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+}
+
+.btn-logout:active {
+  transform: translateY(0);
 }
 
 /* responsive */

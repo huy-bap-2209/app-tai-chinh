@@ -38,6 +38,19 @@
   width: 16rem;
   height: 3.6rem;
   margin-right: 4rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.offers-container-header-btn:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.5);
+}
+
+.offers-container-header-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
 }
 
 .offers-container {
@@ -132,6 +145,19 @@
   padding: 0.8rem 1.6rem;
   color: #fff;
   border-radius: 25px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(26, 208, 140, 0.3);
+}
+
+.offers-card-btn button:first-child:hover {
+  background-color: #148a6e;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(26, 208, 140, 0.5);
+}
+
+.offers-card-btn button:first-child:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(26, 208, 140, 0.3);
 }
 
 .offers-card-btn button:last-child {
@@ -140,6 +166,19 @@
   padding: 0.8rem 1.6rem;
   color: #2563eb;
   border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.offers-card-btn button:last-child:hover {
+  background-color: #eef2ff;
+  border-color: #1d4ed8;
+  color: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.offers-card-btn button:last-child:active {
+  transform: translateY(0);
 }
 
 .offers-img {
@@ -201,6 +240,19 @@
   margin-top: clamp(1rem, 1.8vw, 1.5rem);
   font-size: clamp(0.7rem, 1.3vw, 0.9rem);
   cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(26, 208, 140, 0.3);
+}
+
+.offers-img-desc button:hover {
+  background-color: #148a6e;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(26, 208, 140, 0.5);
+}
+
+.offers-img-desc button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(26, 208, 140, 0.3);
 }
 
 .offers-img button img {

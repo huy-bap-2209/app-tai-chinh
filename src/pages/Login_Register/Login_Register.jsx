@@ -2,10 +2,18 @@ import { useState } from "react";
 import "./Login_Register.css";
 // import LogoLogin from "../../images/logo_login.svg";
 import BackgroundLogin from "../../images/loan-img-3.jpg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Login_Register() {
   const [isLoginRegister, setIsLoginRegister] = useState("Login");
+  const navigate = useNavigate();
+
+  const handleLogin = (e) => {
+    if (e && e.preventDefault) e.preventDefault();
+    localStorage.setItem("loggedIn", "true");
+    navigate("/");
+  };
+
   return (
     <div className="login-register-wrapper">
       <div className="login-background">
@@ -36,7 +44,7 @@ function Login_Register() {
 
       {/* right layout */}
       <div className="login-register-right">
-        <form className="login-form">
+        <form className="login-form" onSubmit={handleLogin}>
           {/* <img src={LogoLogin} alt="" className="login-form-icon" /> */}
           <h2>{isLoginRegister}</h2>
           {isLoginRegister === "Register" ? (

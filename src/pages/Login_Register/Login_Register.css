@@ -95,11 +95,33 @@
 .btn-facebook {
   background: #3b5998;
   color: #fff;
+  transition: all 0.3s ease;
+}
+
+.btn-facebook:hover {
+  background: #2d4373;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(59, 89, 152, 0.4);
+}
+
+.btn-facebook:active {
+  transform: translateY(0);
 }
 
 .btn-google {
   background: #444;
   color: #fff;
+  transition: all 0.3s ease;
+}
+
+.btn-google:hover {
+  background: #222;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.btn-google:active {
+  transform: translateY(0);
 }
 
 /* right layout */
@@ -200,7 +222,14 @@
 }
 
 .btn-login:hover {
-  box-shadow: 0 6px 18px rgb(56, 223, 0);
+  background-color: #48d929;
+  box-shadow: 0 6px 18px rgba(90, 244, 38, 0.5);
+  transform: translateY(-2px);
+}
+
+.btn-login:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(90, 244, 38, 0.3);
 }
 
 .back-home-page-btn-login {

@@ -58,7 +58,7 @@ function Discount() {
         <strong>giảm giá từ 5 đến 15%</strong> khi đăng ký khoản vay từ một
         trong các đối tác của chúng tôi. Bạn sẽ tìm thấy một số mã khuyến mãi
         bên dưới hoặc bạn có thể lấy chúng bằng cách liên hệ với bộ phận hỗ trợ
-        kỹ thuật của chúng tôi.
+        của chúng tôi.
       </p>
       {/* muted: web chỉ autoplay khu muted */}
       {/* loop: chạy xong replay */}

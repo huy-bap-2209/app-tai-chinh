@@ -56,6 +56,18 @@ body {
   color: #fff;
   border: none;
   justify-content: flex-end;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+}
+
+.promo-nav button:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+}
+
+.promo-nav button:active {
+  transform: translateY(0);
 }
 
 .promo-grid {
@@ -107,8 +119,26 @@ body {
   font-size: 0.9rem;
 }
 
-.promo-code button:hover {
+.promo-code button {
   background: #2563eb;
+  color: white;
+  border: none;
+  padding: 0.3rem 0.7rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+}
+
+.promo-code button:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+}
+
+.promo-code button:active {
+  transform: translateY(0);
 }
 
 /* responsive */

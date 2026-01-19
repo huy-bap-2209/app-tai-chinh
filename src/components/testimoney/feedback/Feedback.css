@@ -156,6 +156,11 @@
 .btn-submit:hover {
   background: #1d4ed8;
   box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+  transform: translateY(-1px);
+}
+
+.btn-submit:active {
+  transform: translateY(0);
 }
 
 .btn-reset {
@@ -166,6 +171,12 @@
 
 .btn-reset:hover {
   background: #e5e7eb;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-reset:active {
+  transform: translateY(0);
 }
 
 .btn-close {

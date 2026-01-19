@@ -133,6 +133,19 @@
   cursor: pointer;
   font-weight: bold;
   color: #fff;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(26, 208, 140, 0.3);
+}
+
+.footer-mid-more-info-btn:hover {
+  background-color: #148a6e;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(26, 208, 140, 0.5);
+}
+
+.footer-mid-more-info-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(26, 208, 140, 0.3);
 }
 
 .logo-slogan {

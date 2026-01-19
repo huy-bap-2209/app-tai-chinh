@@ -1,3 +1,4 @@
+import React from "react";
 import "./Offers.css";
 
 import agribankLogo from "../../images/agribank-icon.png";
@@ -12,10 +13,10 @@ import timeWorkingIcon from "../../images/time.svg";
 import offersImg from "../../images/offers-img.jpg";
 import rightArrowIcon from "../../images/right-arrow-icon.svg";
 
-function Offers({ scrollToCategory }) {
+const Offers = React.forwardRef(({ scrollToCategory }, ref) => {
   return (
     <>
-      <div className="offers-container">
+      <div className="offers-container" ref={ref}>
         {/* header */}
         <div className="offers-container-header">
           <div className="offers-container-header-text">
@@ -274,6 +275,8 @@ function Offers({ scrollToCategory }) {
       </div>
     </>
   );
-}
+});
+
+Offers.displayName = "Offers";
 
 export default Offers;
