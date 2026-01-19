@@ -7,6 +7,7 @@ import logoWeb from "../../images/logo_web.png";
 
 function Navbar() {
   const [openSidebar, setOpenSidebar] = useState(false);
+  const [mobileMenu, setMobileMenu] = useState(false);
 
   //nhận biết trạng thái
   const [loggedIn, setLoggedIn] = useState(
@@ -28,55 +29,95 @@ function Navbar() {
           <div className="header-container-navbar-logo">
             <img src={logoWeb} alt="Logo Web" />
           </div>
+          {/* list trên desktop */}
           <nav className="header-container-navbar-list">
             <a href="/">Trang chủ</a>
             <a href="#">Dịch vụ</a>
             <a href="#">Giới thiệu</a>
             <a href="#">Liên hệ</a>
-            <div className="header-container-navbar-list">
-              <a
-                className={`header-container-profile ${
-                  openSidebar ? "open" : ""
-                }`}
-                onClick={() => setOpenSidebar(!openSidebar)}
-              >
-                Trang cá nhân
-                {/* <img
+            <a
+              className={`header-container-profile ${
+                openSidebar ? "open" : ""
+              }`}
+              onClick={() => setOpenSidebar(!openSidebar)}
+            >
+              Trang cá nhân
+              {/* <img
                   src={downArrow}
                   alt="Down Arrow"
                   className="header-container-navbar-icon"
                 /> */}
-              </a>
-              {/* <img
+            </a>
+            {/* <img
                 src={searchIcon}
                 alt="Search"
                 className="header-container-navbar-icon"
               /> */}
-              {/* <img
+            {/* <img
               src={shoppingCartIcon}
               alt="Shopping Cart"
               className="header-container-navbar-icon"
             /> */}
-            </div>
           </nav>
-
           <div className="header-container-navbar-login-register">
-            {!loggedIn ? (
-              <>
-                <Link to="/login_register">Đăng Ký</Link>
-                <hr />
-                <Link to="/login_register">Đăng Nhập</Link>
-              </>
-            ) : (
+            {loggedIn ? (
               <>
                 <Link to="/profile">Xin chào👋 #userName </Link>
-                <hr />
+                {/* <hr /> */}
                 <button className="btn-logout" onClick={handleLogout}>
                   Đăng xuất
                 </button>
               </>
+            ) : (
+              <>
+                {/* <Link to="/login_register">Đăng Ký</Link> */}
+                {/* <hr /> */}
+                <Link to="/login_register">Đăng Nhập</Link>
+              </>
             )}
           </div>
+
+          {/* list trên mobile */}
+          <div
+            className="mobile-navbar-header-icon"
+            onClick={() => setMobileMenu(!mobileMenu)}
+          >
+            ☰
+          </div>
+          <nav>
+            {mobileMenu && (
+              <div className="mobile-navbar-header-list hidden">
+                <a href="/">Trang chủ</a>
+                <a href="#">Dịch vụ</a>
+                <a href="#">Giới thiệu</a>
+                <a href="#">Liên hệ</a>
+                <a
+                  className={`header-container-profile ${
+                    openSidebar ? "open" : ""
+                  }`}
+                  onClick={() => setOpenSidebar(!openSidebar)}
+                >
+                  Trang cá nhân
+                </a>
+                {loggedIn ? (
+                  <>
+                    <Link to="/profile">Xin chào👋 #userName</Link>
+                    <button
+                      className="mobile-btn-logout"
+                      onClick={handleLogout}
+                    >
+                      Đăng xuất
+                    </button>
+                  </>
+                ) : (
+                  <>
+                    {/* <Link to="/login_register">Đăng Ký</Link> */}
+                    <Link to="/login_register">Đăng Nhập</Link>
+                  </>
+                )}
+              </div>
+            )}
+          </nav>
         </nav>
       </header>
     </div>
