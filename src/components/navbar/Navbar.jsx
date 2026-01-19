@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
@@ -7,6 +7,17 @@ import logoWeb from "../../images/logo_web.png";
 
 function Navbar() {
   const [openSidebar, setOpenSidebar] = useState(false);
+
+  //nhận biết trạng thái
+  const [loggedIn, setLoggedIn] = useState(false);
+  useEffect(() => {
+    setLoggedIn(localStorage.getItem("loggedIn") === "true");
+  }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem("LoggedIn");
+    window.location.reload();
+  };
 
   return (
     <div>
@@ -30,7 +41,7 @@ function Navbar() {
                 }`}
                 onClick={() => setOpenSidebar(!openSidebar)}
               >
-                Khám phá thêm
+                Trang cá nhân
                 {/* <img
                   src={downArrow}
                   alt="Down Arrow"
@@ -51,9 +62,19 @@ function Navbar() {
           </nav>
 
           <div className="header-container-navbar-login-register">
-            <Link to="/login_register">Đăng Ký</Link>
-            <hr />
-            <Link to="/login_register">Đăng Nhập</Link>
+            {!loggedIn ? (
+              <>
+                <Link to="/login_register">Đăng Ký</Link>
+                <hr />
+                <Link to="/login_register">Đăng Nhập</Link>
+              </>
+            ) : (
+              <>
+                <Link to="/profile">Xin chào👋 #userName </Link>
+                <hr />
+                <button onClick={handleLogout}>Đăng xuất</button>
+              </>
+            )}
           </div>
         </nav>
       </header>
