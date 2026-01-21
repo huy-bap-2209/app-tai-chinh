@@ -19,13 +19,13 @@ function LoanModal({ isOpen, onClose, bankName }) {
     });
   };
 
-  const handleBack = () => {
-    if (bankName) {
-      navigate(`/bank_info?bank=${bankName}`);
-    } else {
-      navigate("/");
-    }
-  };
+  // const handleBack = () => {
+  //   if (bankName) {
+  //     navigate(`/bank_info?bank=${bankName}`);
+  //   } else {
+  //     navigate("/");
+  //   }
+  // };
 
   // const handlePromoClick = () => {
   //   navigate(`/promo_page?bank=${bankName}`);
