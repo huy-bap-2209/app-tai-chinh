@@ -4,6 +4,8 @@ import "./Discount.css";
 
 import loanVideo from "../../videos/loans-video.mp4";
 
+import discountData from "./DiscountData";
+
 function Discount() {
   // hàm để autoplay video
   const videoRef = useRef(null);
@@ -74,28 +76,13 @@ function Discount() {
         <source src={loanVideo} type="video/mp4" />
       </video>
       <div className="discount-bank">
-        <div className="discount-bank-item">
-          <h3>Vietcombank</h3>
-          <i>Dành cho doanh nghiệp với mọi quy mô.</i>
-          <p>#2209BTCVIETCOMBANK</p>
-        </div>
-        <div className="discount-bank-item">
-          <h3>Mbbank</h3>
-          <i>
-            Dành cho đa số loại lĩnh vực bạn đều có thể vay với lãi suất ưu đãi
-          </i>
-          <p>#2209BTCMBBANK</p>
-        </div>
-        <div className="discount-bank-item">
-          <h3>Agribank</h3>
-          <i>Hỗ trợ sinh viên mọi lĩnh vực tất toán nhanh chóng</i>
-          <p>#2209BTCAGRIBANK</p>
-        </div>
-        <div className="discount-bank-item">
-          <h3>Vib</h3>
-          <i>Giải pháp hoàn thiện về tải chính dành cho người cao tuổi</i>
-          <p>#2209BTCVIB</p>
-        </div>
+        {discountData.map((discount, index) => (
+          <div className="discount-bank-item" key={index}>
+            <h3>{discount.bankName}</h3>
+            <i>{discount.desc}</i>
+            <p>{discount.code}</p>
+          </div>
+        ))}
       </div>
     </div>
   );

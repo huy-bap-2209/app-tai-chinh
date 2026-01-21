@@ -3,6 +3,8 @@ import React from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./PromoPage.css";
 
+import discountData from "../DiscountData";
+
 function PromoPage() {
   //mảng này dùng map để render ra các card tương ứng
   const promoCodes = [

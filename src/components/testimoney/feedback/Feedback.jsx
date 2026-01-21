@@ -34,8 +34,6 @@ function Feedback({ isOpen, onClose }) {
     setOpinion("");
   };
 
-  if (!isOpen) return null;
-
   return (
     <div className="feedback-overlay">
       <div className="feedback-container">
@@ -135,13 +133,21 @@ function Feedback({ isOpen, onClose }) {
                 <option value="" disabled>
                   vui lòng chọn
                 </option>
-                <option value="1">Page lỗi</option>
-                <option value="2">Khoản vay chưa tất toán</option>
-                <option value="3">Không thêm được mã ưu đãi</option>
-                <option value="4">Không tìm được ngân hàng phù hợp</option>
-                <option value="5">Ngân hàng không khả dụng</option>
-                <option value="6">Góp ý kiến</option>
-                <option value="7">Khác</option>
+                <option value="Page lỗi">Page lỗi</option>
+                <option value="Khoản vay chưa tất toán">
+                  Khoản vay chưa tất toán
+                </option>
+                <option value="Không thêm được mã ưu đãi">
+                  Không thêm được mã ưu đãi
+                </option>
+                <option value="Không tìm được ngân hàng phù hợp">
+                  Không tìm được ngân hàng phù hợp
+                </option>
+                <option value="Ngân hàng không khả dụng">
+                  Ngân hàng không khả dụng
+                </option>
+                <option value="Góp ý kiến">Góp ý kiến</option>
+                <optionn value="Khác">Khác</optionn>
               </select>
             </div>
 
@@ -159,9 +165,9 @@ function Feedback({ isOpen, onClose }) {
         </div>
 
         <div className="feedback-footer">
-            <button className="btn-submit" onClick={handleSubmit}>
-              Gửi
-            </button>
+          <button className="btn-submit" onClick={handleSubmit}>
+            Gửi
+          </button>
           <div className="button-group">
             <button className="btn-reset" onClick={handleReset}>
               Làm mới
