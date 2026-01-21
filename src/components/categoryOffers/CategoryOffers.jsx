@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 
 import "./CategoryOffers.css";
 
-import LoanModal from "./LoanModal/LoanModal";
+import LoanModal from "./LoanModal/LoanModal.jsx";
 
 import TabData from "./TabData";
 import TabContentData from "./TabContentData";
