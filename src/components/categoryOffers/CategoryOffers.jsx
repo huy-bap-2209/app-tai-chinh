@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 
 import "./CategoryOffers.css";
 
-import LoanModal from "./LoanModal/LoanModal.jsx";
+import LoanModal from "./loanModal/LoanModal.jsx";
 
 import TabData from "./TabData";
 import TabContentData from "./TabContentData";
@@ -14,7 +14,7 @@ const CategoryOffers = forwardRef((props, ref) => {
   const [hasProcessedState, setHasProcessedState] = useState(false);
 
   const [activeTab, setActiveTab] = useState("business");
-  const categories = ["business", "student", "elderly"];
+  // const categories = ["business", "student", "elderly"];
 
   const location = useLocation();
 
@@ -72,9 +72,10 @@ const CategoryOffers = forwardRef((props, ref) => {
           </h5>
         </div>
       </div>
+
       <div className="category-tab">
         <div className="category-tab-list">
-          {/* chỉ map cho item k bọc làm wrapper */}
+          {/* tab bar */}
           {TabData.map((Tab) => (
             <div
               key={Tab.filter}
@@ -85,47 +86,40 @@ const CategoryOffers = forwardRef((props, ref) => {
             </div>
           ))}
         </div>
-        {/* Tab list */}
+        {/* tab list */}
         <div className="category-tab-wrapper">
-          {categories.map((categor) => (
-            <div
-              key={categor}
-              className={`category-tab-wrapper-content ${
-                activeTab === categor ? "active" : ""
-              }`}
-            >
-              <div className="category-offers-grid">
-                {TabContentData.filter((item) => item.category === categor).map(
-                  (content) => (
-                    <div className="category-offers-card" key={content.id}>
-                      <h3>
-                        {content.bankName} / <span>{content.amount}</span>
-                      </h3>
-                      <div className="category-offers-info">
-                        {content.info.map((text, idx) => (
-                          <span className="dot-text" key={idx}>
-                            {text}
-                          </span>
-                        ))}
-                      </div>
-                      <p className="offers-desc">{content.desc} </p>
-                      <div className="offers-actions">
-                        <button
-                          className="btn-underline"
-                          onClick={() => handleOpenModal(content.bankName)}
-                        >
-                          NHẬN KHOẢN VAY
-                        </button>
-                        <Link to="/Bank_info" className="btn-underline">
-                          THÔNG TIN
-                        </Link>
-                      </div>
+          <div className={`category-tab-wrapper-content active`}>
+            <div className="category-offers-grid">
+              {TabContentData.filter((item) => item.category === activeTab).map(
+                (list) => (
+                  <div className="category-offers-card" key={list.id}>
+                    <h3>
+                      {list.bankName} / <span>{list.amount}</span>
+                    </h3>
+                    <div className="category-offers-info">
+                      {list.info.map((text, idx) => (
+                        <span className="dot-text" key={idx}>
+                          {text}
+                        </span>
+                      ))}
                     </div>
-                  ),
-                )}
-              </div>
+                    <p className="offers-desc">{list.desc}</p>
+                    <div className="offers-actions">
+                      <button
+                        className="btn-underline"
+                        onClick={() => handleOpenModal(list.bankName)}
+                      >
+                        NHẬN KHOẢN VAY
+                      </button>
+                      <Link to="/Bank_info" className="btn-underline">
+                        THÔNG TIN
+                      </Link>
+                    </div>
+                  </div>
+                ),
+              )}
             </div>
-          ))}
+          </div>
         </div>
       </div>
       {/* prettier-ignore */}

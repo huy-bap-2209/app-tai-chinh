@@ -72,7 +72,12 @@ function Navbar() {
               <>
                 {/* <Link to="/login_register">Đăng Ký</Link> */}
                 {/* <hr /> */}
-                <Link to="/login_register">Đăng Nhập</Link>
+                <Link
+                  to="/login_register"
+                  className="header-container-navbar-login-btn"
+                >
+                  Đăng Nhập
+                </Link>
               </>
             )}
           </div>

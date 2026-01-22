@@ -51,7 +51,7 @@ function Home() {
             className="home-container-content-btn"
             onClick={scrollToOffers}
           >
-            VAY NGAY
+            ƯU ĐÃI HIỆN TẠI
             <img
               src={rightArrowIcon}
               alt=""
@@ -104,7 +104,6 @@ function Home() {
             <img src={homeFeature4} alt="" />
           </div>
           <h3>
-            {" "}
             Trả nợ <br /> tự động
           </h3>
           <span className="home-feature-items-line"></span>
