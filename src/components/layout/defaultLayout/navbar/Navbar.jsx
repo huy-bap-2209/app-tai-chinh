@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
-import logoWeb from "../../images/logo_web.png";
+import logoWeb from "../../../../images/logo_web.png";
 
 function Navbar() {
   const [openSidebar, setOpenSidebar] = useState(false);
@@ -31,11 +31,12 @@ function Navbar() {
           </div>
           {/* list trên desktop */}
           <nav className="header-container-navbar-list">
-            <a href="/">Trang chủ</a>
-            <a href="#">Dịch vụ</a>
-            <a href="#">Giới thiệu</a>
-            <a href="#">Liên hệ</a>
-            <a
+            <Link to="/">Trang chủ</Link>
+            <Link to="/service">Dịch vụ</Link>
+            <Link to="/introduce">Giới thiệu</Link>
+            <Link to="/contact">Liên hệ</Link>
+            <Link 
+              to='/profile'
               className={`header-container-profile ${
                 openSidebar ? "open" : ""
               }`}
@@ -47,7 +48,7 @@ function Navbar() {
                   alt="Down Arrow"
                   className="header-container-navbar-icon"
                 /> */}
-            </a>
+            </Link>
             {/* <img
                 src={searchIcon}
                 alt="Search"

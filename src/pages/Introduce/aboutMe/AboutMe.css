@@ -1,0 +1,106 @@
+.aboutme-container {
+  text-align: left;
+  padding: 4rem 10rem;
+  background: #f4f6fe;
+  align-items: stretch; /*Mỗi cột con sẽ cao bằng cột cao nhất*/
+}
+
+.aboutme-title {
+  width: 60%;
+  font-size: 1.2rem;
+}
+
+.aboutme-title h5 {
+  color: #265ec2;
+  font-size: 0.8rem;
+  margin-bottom: 2rem;
+}
+
+.aboutme-title h1 {
+  margin-bottom: 3rem;
+}
+
+.aboutme-content {
+  display: flex;
+  /* grid-template-columns: 25% 25% 50%; */
+  justify-content: center;
+  /* align-items: center; */
+  gap: 2rem;
+}
+
+.aboutme-content-left {
+  width: 25%; /*2 div chiếm 25%*/
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutme-content-left h3 {
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+  color: #1ad08c;
+}
+
+.aboutme-content-left p {
+  color: #828292;
+}
+
+.aboutme-content-left-link {
+  font-size: 0.8rem;
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #2a2929;
+}
+
+.aboutme-content-left-link:hover {
+  color: #989494;
+}
+
+.imgg:hover {
+  color: #1ad08c;
+}
+
+.aboutme-content-left img {
+  width: 14px;
+  height: 14px;
+  filter: invert(1) brightness(0);
+}
+
+.aboutme-content-right {
+  width: 50%; /*div này chiếm 50%, content k bị tràn viền*/
+  box-sizing: border-box;
+}
+
+.aboutme-content-right h4 {
+  color: #5d5d5d;
+}
+
+.aboutme-content-right p {
+  color: #828292;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+.aboutme-content-image {
+  margin-top: 3rem;
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  gap: 36px;
+  /* flex-wrap: wrap; xuống dòng nếu k đủ diện tích */
+}
+
+.aboutme-content-img {
+  width: auto;
+  height: 430px;
+  /* object-fit: cover; */
+}
+
+.aboutme-content-img:first-child {
+  width: 800px;
+}
+
+.aboutme-content-img:last-child {
+  width: 380px;
+}

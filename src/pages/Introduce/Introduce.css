@@ -1,0 +1,69 @@
+.introduce-container {
+  padding-top: 64px;
+}
+
+.introduce-header {
+  width: 100vw;
+  height: 60vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.introduce-header-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* margin-top: 4rem; */
+  display: block;
+}
+
+.introduce-overlay {
+  position: absolute;
+  inset: 0;
+  /* background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(3px); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.introduce-overlay-desc {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(4px);
+  padding: 2.8rem 4.6rem;
+  border-radius: 16px;
+  text-align: center;
+  width: 40%;
+}
+
+.introduce-overlay-desc span {
+  background-color: #000;
+  color: #fff;
+  padding: 0.2rem;
+}
+
+.introduce-overlay-desc h1 {
+  margin-bottom: 0.6rem;
+}
+
+.introduce-overlay-desc p {
+  margin-bottom: 0.6rem;
+}
+
+.introduce-overlay-desc button {
+  background-color: #1ad08c;
+  border: none;
+  padding: 0.8rem 1.6rem;
+  color: #fff;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(26, 208, 140, 0.3);
+  cursor: pointer;
+}
+
+.introduce-overlay-desc button:hover {
+  background-color: #148a6e;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(26, 208, 140, 0.5);
+}

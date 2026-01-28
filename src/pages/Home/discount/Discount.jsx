@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import "./Discount.css";
 
-import loanVideo from "../../videos/loans-video.mp4";
+import loanVideo from "../../../videos/loans-video.mp4";
 
 import discountData from "./DiscountData";
 

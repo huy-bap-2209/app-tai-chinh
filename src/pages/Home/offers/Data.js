@@ -1,13 +1,13 @@
-import percentIcon from "../../images/percent.svg";
-import hotOffersIcon from "../../images/hot-offers.svg";
-import timeWorkingIcon from "../../images/time.svg";
+import percentIcon from "../../../images/percent.svg";
+import hotOffersIcon from "../../../images/hot-offers.svg";
+import timeWorkingIcon from "../../../images/time.svg";
 
-import agribankLogo from "../../images/agribank-icon.png";
-import vietcombankLogo from "../../images/vietcombank-icon.png";
-import saigonbankLogo from "../../images/saigonbank-icon.png";
-import vibLogo from "../../images/vib-icon.png";
-import vietinbankLogo from "../../images/vietinbank-icon.png";
-import vpbankLogo from "../../images/vpbank-icon.png";
+import agribankLogo from "../../../images/agribank-icon.png";
+import vietcombankLogo from "../../../images/vietcombank-icon.png";
+import saigonbankLogo from "../../../images/saigonbank-icon.png";
+import vibLogo from "../../../images/vib-icon.png";
+import vietinbankLogo from "../../../images/vietinbank-icon.png";
+import vpbankLogo from "../../../images/vpbank-icon.png";
 
 const offersData = [
   /* prettier-ignore */

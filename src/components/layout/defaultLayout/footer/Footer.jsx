@@ -1,15 +1,16 @@
 import React from "react";
 import "./Footer.css";
 
-import phoneNumber from "../../images/phone-number.svg";
-import Email from "../../images/email.svg";
-import Address from "../../images/address.svg";
-import WorkingHours from "../../images/working-time.svg";
-import logoWeb from "../../images/logo_web.png";
-import facebookIcon from "../../images/facebook-icon.svg";
-import twitterIcon from "../../images/twitter-icon.svg";
-import instagramIcon from "../../images/instagram-icon.svg";
-import letegramIcon from "../../images/telegram-icon.svg";
+import phoneNumber from "../../../../images/phone-number.svg";
+import Email from "../../../../images/email.svg";
+import Address from "../../../../images/address.svg";
+import WorkingHours from "../../../../images/working-time.svg";
+import logoWeb from "../../../../images/logo_web.png";
+import facebookIcon from "../../../../images/facebook-icon.svg";
+import twitterIcon from "../../../../images/twitter-icon.svg";
+import instagramIcon from "../../../../images/instagram-icon.svg";
+import letegramIcon from "../../../../images/telegram-icon.svg";
+
 function Footer() {
   return (
     <div className="main-footer">

@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import "./Testimoney.css";
 
-import logoWeb from "../../images/logo_web.png";
-import hieuNgo from "../../images/hieu-bap-img.jpg";
-import thanhNgo from "../../images/thanh-bap-img.jpg";
-import vuongPham from "../../images/vuong-pham-img.jpg";
+import logoWeb from "../../../images/logo_web.png";
 import { Link } from "react-router-dom";
 
 import Feedback from "./feedback/Feedback";

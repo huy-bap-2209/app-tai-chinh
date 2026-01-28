@@ -1,19 +1,37 @@
 import "./App.css";
-import { Routes, Router, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
-import Login_Register from "./pages/Login_Register/Login_Register";
-import Home from "./pages/Home/Home";
-import PromoPage from "./components/discount/promo/PromoPage";
-import BankInfo from "./components/categoryOffers/BankInfo/BankInfo";
+import publicRoutes from "./routes";
+import DefaultLayout from "./components/layout/defaultLayout/DefaultLayout";
+import { Fragment } from "react";
 
 export default function App() {
   return (
     <>
       <Routes>
-        <Route path="/login_register" element={<Login_Register />} />
-        <Route path="/" element={<Home />} />
-        <Route path="/promo_page" element={<PromoPage />}/>
-        <Route path="/bank_info" element={<BankInfo/>}/>
+        {publicRoutes.map((route, index) => {
+          const Pages = route.component;
+          // const Layout = DefaultLayout;
+
+          let StyleLayout = DefaultLayout;
+          if (route.style) {
+            StyleLayout = route.style;
+          } else if (route.style === null) {
+            StyleLayout = Fragment;
+          }
+
+          return (
+            <Route
+              key={index}
+              path={route.path}
+              element={
+                <StyleLayout>
+                  <Pages />
+                </StyleLayout>
+              }
+            />
+          );
+        })}
       </Routes>
     </>
   );

@@ -1,8 +1,8 @@
 import React from "react";
 import "./Offers.css";
 
-import offersImg from "../../images/offers-img.jpg";
-import rightArrowIcon from "../../images/right-arrow-icon.svg";
+import offersImg from "../../../images/offers-img.jpg";
+import rightArrowIcon from "../../../images/right-arrow-icon.svg";
 import offersData from "./Data";
 
 const Offers = React.forwardRef(({ scrollToCategory }, ref) => {

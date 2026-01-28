@@ -1,6 +1,6 @@
-import hieuNgo from "../../images/hieu-bap-img.jpg";
-import thanhNgo from "../../images/thanh-bap-img.jpg";
-import vuongPham from "../../images/vuong-pham-img.jpg";
+import hieuNgo from "../../../images/hieu-bap-img.jpg";
+import thanhNgo from "../../../images/thanh-bap-img.jpg";
+import vuongPham from "../../../images/vuong-pham-img.jpg";
 
 const TestimoneyData = [
   {
