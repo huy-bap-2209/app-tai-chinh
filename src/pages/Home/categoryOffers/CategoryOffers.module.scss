@@ -86,25 +86,33 @@
 
 .category-offers-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: clamp(1rem, 2vw, 2rem);
+  grid-template-columns: repeat(2, 1fr); // 2 cột
+  gap: clamp(1.5rem, 2vw, 2rem);
   padding: 0 clamp(2rem, 10vw, 10rem);
+
+  .category-offers-card {
+    background: #fff;
+    padding: clamp(1.5rem, 2vw, 2rem);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    text-align: left;
+
+    h3 {
+      font-size: clamp(1.2rem, 2.5vw, 1.4rem);
+      margin-bottom: 1rem;
+
+      span {
+        color: #1ad08c;
+      }
+    }
+  }
 }
 
-.category-offers-card {
-  background: #fff;
-  padding: clamp(1.5rem, 2vw, 2rem);
-  max-width: 100%;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  text-align: left;
-
-  h3 {
-    font-size: clamp(1.2rem, 2.5vw, 1.4rem);
-    margin-bottom: 1rem;
-
-    span {
-      color: #1ad08c;
-    }
+/* Responsive */
+@media (max-width: 768px) {
+  .category-offers-grid {
+    grid-template-columns: 1fr; // mobile: 1 cột
+    gap: clamp(1rem, 2vw, 1.5rem);
+    padding: 0 clamp(1rem, 5vw, 2rem);
   }
 }
 
@@ -178,12 +186,14 @@
   }
 
   .category-offers-grid {
-    // grid-template-columns: 1fr;
-     gap: 1.5rem;
+    grid-template-columns: 1fr; // mobile 1 cột
+    gap: clamp(1rem, 2vw, 1.5rem);
     padding: 0 clamp(1rem, 5vw, 2rem);
   }
-
-  .category-offers-card{
-      padding: 1rem;
+  .category-offers-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
   }
 }

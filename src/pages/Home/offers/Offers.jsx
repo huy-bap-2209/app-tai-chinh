@@ -1,13 +1,13 @@
 import React from "react";
 import classNames from "classnames/bind";
 import styles from "./Offers.module.scss";
+const cx = classNames.bind(styles);
 
 import offersImg from "../../../images/offers-img.jpg";
 import rightArrowIcon from "../../../images/right-arrow-icon.svg";
 import offersData from "./Data";
 import Button from "../../../components/element/Button/Button";
 
-const cx = classNames.bind(styles);
 
 const Offers = React.forwardRef(({ scrollToCategory }, ref) => {
   return (
