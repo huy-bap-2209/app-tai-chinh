@@ -64,7 +64,7 @@ const offersData = [
       { icon: hotOffersIcon, text: "Ưu đãi thông thường" },
       { icon: timeWorkingIcon, text: "3 ngày làm việc" },
     ],
-    desc: "Loại cho vay cho người cao tuổi. Loại khoản vay nhân từ dành cho người già nuôi con hoặc trang trải cuộc sống.",
+    desc: "Loại cho vay cho người cao tuổi. Loại khoản vay nhân từ dành cho người già trang trải cuộc sống.",
   },
   {
     id: 5,
