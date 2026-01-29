@@ -34,7 +34,7 @@ const offersData = [
     target: "Sinh viên",
     info: [
       { icon: percentIcon, text: "9" },
-      { icon: hotOffersIcon, text: "có ưu đãi" },
+      { icon: hotOffersIcon, text: "Ưu đãi thông thường" },
       { icon: timeWorkingIcon, text: "3 ngày làm việc" },
     ],
     desc: "Phương sách cuối cùng trong trường hợp khẩn cấp thực sự - nếu bạn cần trả tiền cho học kỳ tiếp theo.",
@@ -61,7 +61,7 @@ const offersData = [
     target: "Người cao tuổi",
     info: [
       { icon: percentIcon, text: "5" },
-      { icon: hotOffersIcon, text: "có ưu đãi" },
+      { icon: hotOffersIcon, text: "Ưu đãi thông thường" },
       { icon: timeWorkingIcon, text: "3 ngày làm việc" },
     ],
     desc: "Loại cho vay cho người cao tuổi. Loại khoản vay nhân từ dành cho người già nuôi con hoặc trang trải cuộc sống.",

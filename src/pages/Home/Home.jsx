@@ -1,16 +1,9 @@
 import React, { useRef } from "react";
 import "./Home.css";
-
-// import searchIcon from "../../images/search-icon.svg";
-// import shoppingCartIcon from "../../images/shopping-cart-icon.svg";
-// import downArrow from "../../images/down-arrow-icon.svg";
-// import backgroundImg from '../../images/background-home-page.jpg'
 import rightArrowIcon from "../../images/right-arrow-icon.svg";
 
-import Navbar from "../../components/layout/defaultLayout/navbar/Navbar";
 import Feature from "./feature/Feature";
 import Offers from "./offers/Offers";
-import Footer from "../../components/layout/defaultLayout/footer/Footer";
 import CategoryOffers from "./categoryOffers/CategoryOffers";
 import Discount from "./discount/Discount";
 import Testimoney from "./testimoney/Testimoney";
@@ -30,9 +23,6 @@ function Home() {
   return (
     <>
       <div className="home-container">
-        {/* navbar */}
-        {/* <Navbar /> */}
-        {/* main content */}
         <div className="home-container-content">
           <p className="home-container-content-desc">
             Nhận ngay tiền mặt lên tới $100,000,000đ

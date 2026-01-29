@@ -1,18 +1,16 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./Navbar.css";
-
+import classNames from "classnames/bind";
+import styles from "./Navbar.module.scss";
 import logoWeb from "../../../../images/logo_web.png";
+import Button from "../../../element/Button/Button";
+
+const cx = classNames.bind(styles);
 
 function Navbar() {
   const [openSidebar, setOpenSidebar] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
-
-  //nhận biết trạng thái
-  const [loggedIn, setLoggedIn] = useState(
-    localStorage.getItem("loggedIn") === "true",
-  );
+  const [loggedIn] = useState(localStorage.getItem("loggedIn") === "true");
 
   const handleLogout = () => {
     localStorage.removeItem("loggedIn");
@@ -20,113 +18,70 @@ function Navbar() {
   };
 
   return (
-    <div>
-      <header className="header-container">
-        <nav className="header-container-navbar">
-          {/* <div className="header-container-navbar-circle">
-            <h2 className="header-container-navbar-title">BTC</h2>
-          </div> */}
-          <div className="header-container-navbar-logo">
-            <img src={logoWeb} alt="Logo Web" />
-          </div>
-          {/* list trên desktop */}
-          <nav className="header-container-navbar-list">
-            <Link to="/">Trang chủ</Link>
-            <Link to="/service">Dịch vụ</Link>
-            <Link to="/introduce">Giới thiệu</Link>
-            <Link to="/contact">Liên hệ</Link>
-            <Link 
-              to='/profile'
-              className={`header-container-profile ${
-                openSidebar ? "open" : ""
-              }`}
+    <header className={cx("header-container")}>
+      <nav className={cx("navbar-main")}>
+        <div className={cx("logo-wrapper")}>
+          <img src={logoWeb} alt="Logo Web" />
+        </div>
+
+        <div className={cx("nav-list")}>
+          <Button to="/">Trang chủ</Button>
+          <Button to="/service">Dịch vụ</Button>
+          <Button to="/introduce">Giới thiệu</Button>
+          <Button to="/contact">Liên hệ</Button>
+          <Button to="/profile">Trang cá nhân</Button>
+        </div>
+
+        <div className={cx("login-register")}>
+          {loggedIn ? (
+            <>
+              <Link to="/profile">Xin chào👋 #userName</Link>
+              <button className={cx("btn-logout")} onClick={handleLogout}>
+                Đăng xuất
+              </button>
+            </>
+          ) : (
+            <Link to="/login_register">Đăng Nhập</Link>
+          )}
+        </div>
+
+        <button
+          className={cx("mobile-menu-icon")}
+          onClick={() => setMobileMenu(!mobileMenu)}
+        >
+          ☰
+        </button>
+
+        {mobileMenu && (
+          <div className={cx("mobile-menu", "show")}>
+            <Button to="/">Trang chủ</Button>
+            <Button to="/service">Dịch vụ</Button>
+            <Button to="/introduce">Giới thiệu</Button>
+            <Button to="/contact">Liên hệ</Button>
+            <Button
+              to="/profile"
+              className={cx("nav-profile", { open: openSidebar })}
               onClick={() => setOpenSidebar(!openSidebar)}
             >
               Trang cá nhân
-              {/* <img
-                  src={downArrow}
-                  alt="Down Arrow"
-                  className="header-container-navbar-icon"
-                /> */}
-            </Link>
-            {/* <img
-                src={searchIcon}
-                alt="Search"
-                className="header-container-navbar-icon"
-              /> */}
-            {/* <img
-              src={shoppingCartIcon}
-              alt="Shopping Cart"
-              className="header-container-navbar-icon"
-            /> */}
-          </nav>
-          <div className="header-container-navbar-login-register">
+            </Button>
             {loggedIn ? (
               <>
-                <Link to="/profile">Xin chào👋 #userName </Link>
-                {/* <hr /> */}
-                <button className="btn-logout" onClick={handleLogout}>
+                <Link to="/profile">Xin chào👋 #userName</Link>
+                <button
+                  className={cx("mobile-btn-logout")}
+                  onClick={handleLogout}
+                >
                   Đăng xuất
                 </button>
               </>
             ) : (
-              <>
-                {/* <Link to="/login_register">Đăng Ký</Link> */}
-                {/* <hr /> */}
-                <Link
-                  to="/login_register"
-                  className="header-container-navbar-login-btn"
-                >
-                  Đăng Nhập
-                </Link>
-              </>
+              <Link to="/login_register">Đăng Nhập</Link>
             )}
           </div>
-
-          {/* list trên mobile */}
-          <div
-            className="mobile-navbar-header-icon"
-            onClick={() => setMobileMenu(!mobileMenu)}
-          >
-            ☰
-          </div>
-          <nav>
-            {mobileMenu && (
-              <div className="mobile-navbar-header-list hidden">
-                <a href="/">Trang chủ</a>
-                <a href="#">Dịch vụ</a>
-                <a href="#">Giới thiệu</a>
-                <a href="#">Liên hệ</a>
-                <a
-                  className={`header-container-profile ${
-                    openSidebar ? "open" : ""
-                  }`}
-                  onClick={() => setOpenSidebar(!openSidebar)}
-                >
-                  Trang cá nhân
-                </a>
-                {loggedIn ? (
-                  <>
-                    <Link to="/profile">Xin chào👋 #userName</Link>
-                    <button
-                      className="mobile-btn-logout"
-                      onClick={handleLogout}
-                    >
-                      Đăng xuất
-                    </button>
-                  </>
-                ) : (
-                  <>
-                    {/* <Link to="/login_register">Đăng Ký</Link> */}
-                    <Link to="/login_register">Đăng Nhập</Link>
-                  </>
-                )}
-              </div>
-            )}
-          </nav>
-        </nav>
-      </header>
-    </div>
+        )}
+      </nav>
+    </header>
   );
 }
 

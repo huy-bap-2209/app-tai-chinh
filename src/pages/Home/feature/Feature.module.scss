@@ -1,0 +1,135 @@
+/* Feature.module.scss */
+.feature {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding: 2rem 10rem;
+  background: #f4f6fe;
+
+  &-items {
+    background: #fff;
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    text-align: left;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      transform: translateY(-5px);
+    }
+
+    h3 {
+      margin: 0;
+    }
+
+    p {
+      color: #6b7280;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    &-icons {
+      width: 4rem;
+      height: 4rem;
+      background: #eef2ff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+
+      img {
+        width: 2rem;
+      }
+    }
+
+    &-line {
+      display: block;
+      width: 4rem;
+      height: 3px;
+      background: #2563eb;
+      margin-bottom: 1rem;
+      margin-top: 1rem;
+    }
+  }
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .feature {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 3rem 5rem;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .feature {
+    grid-template-columns: 1fr;
+    padding: 2rem 2rem;
+    gap: 1.3rem;
+
+    &-items {
+      padding: 1.8rem 1.3rem;
+
+      &-icons {
+        width: 3.5rem;
+        height: 3.5rem;
+      }
+
+      &-line {
+        width: 3rem;
+      }
+
+      p {
+        font-size: 0.88rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .feature {
+    padding: 1.5rem 1rem;
+    gap: 1rem;
+
+    &-items {
+      padding: 1.3rem 0.8rem;
+
+      &-icons {
+        width: 3rem;
+        height: 3rem;
+
+        img {
+          width: 1.4rem;
+        }
+      }
+
+      h3 {
+        font-size: 0.95rem;
+        margin: 0.4rem 0;
+      }
+
+      p {
+        font-size: 0.8rem;
+        line-height: 1.4;
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .feature {
+    &-items {
+      h3 {
+        font-size: 0.85rem;
+      }
+
+      p {
+        font-size: 0.75rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.btn-underline {
+  /* display: inline-block; */
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.8rem;
+  text-decoration: underline;
+  transition: all 0.3s ease;
+  padding: 0.25rem 0;
+}
+
+.btn-underline:hover {
+  opacity: 0.7;
+  transform: translateX(2px);
+}
+
+.btn-underline:active {
+  transform: translateX(0);
+}
