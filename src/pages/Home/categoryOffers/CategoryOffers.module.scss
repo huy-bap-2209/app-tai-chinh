@@ -107,15 +107,6 @@
   }
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .category-offers-grid {
-    grid-template-columns: 1fr; // mobile: 1 cột
-    gap: clamp(1rem, 2vw, 1.5rem);
-    padding: 0 clamp(1rem, 5vw, 2rem);
-  }
-}
-
 .category-offers-info {
   display: flex;
   align-items: center;
@@ -148,15 +139,36 @@
 }
 
 .offers-actions {
-  display: flex;
-  gap: clamp(1rem, 2vw, 1.5rem);
+  display: inline-block;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.8rem;
+  text-decoration: underline;
+  transition: all 0.3s ease;
+  padding: 0.25rem 0;
 
   button {
     color: #1ad08c;
+    &:hover {
+      opacity: 0.7;
+      transform: translateX(2px);
+    }
+    &:active {
+      transform: translateX(0);
+    }
   }
 
   a {
     color: #6b7280;
+    &:hover {
+      opacity: 0.7;
+      transform: translateX(2px);
+    }
+
+    &:active {
+      transform: translateX(0);
+    }
   }
 }
 
@@ -166,7 +178,7 @@
   &.active {
     display: block;
   }
-}
+} /* Responsive */
 
 @media (max-width: 1200px) {
   .category-header {

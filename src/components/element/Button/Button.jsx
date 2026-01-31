@@ -5,12 +5,21 @@ import styles from "./Button.module.scss";
 
 const cx = classNames.bind(styles);
 
-function Button({ children, to, href, onClick, ...rest }) {
+function Button({
+  children,
+  to,
+  href,
+  onClick,
+  className,
+  defaultBtn = false,
+  btnLink = false,
+  btnOutline = false,
+  btnRadius,
+  ...rest
+}) {
   let Comp = "button";
   const props = {
     onClick,
-    to,
-    href,
     ...rest,
   };
 
@@ -22,7 +31,7 @@ function Button({ children, to, href, onClick, ...rest }) {
     Comp = "a";
   }
 
-  const classes = cx("btn-underline");
+  const classes = cx("btn-navigate", className, { defaultBtn, btnLink, btnRadius, btnOutline });
 
   return (
     <Comp className={classes} {...props}>

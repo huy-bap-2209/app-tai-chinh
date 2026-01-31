@@ -104,6 +104,7 @@ const CategoryOffers = forwardRef((props, ref) => {
 
                   <div className={cx("offers-actions")}>
                     <Button
+                    btnOutline
                       onClick={() => handleOpenModal(list.bankName)}
                     >
                       NHẬN KHOẢN VAY

@@ -29,19 +29,21 @@ function Navbar() {
           <Button to="/service">Dịch vụ</Button>
           <Button to="/introduce">Giới thiệu</Button>
           <Button to="/contact">Liên hệ</Button>
-          <Button to="/profile">Trang cá nhân</Button>
+          {/* <Button to="/profile">Trang cá nhân</Button> */}
         </div>
 
         <div className={cx("login-register")}>
           {loggedIn ? (
             <>
-              <Link to="/profile">Xin chào👋 #userName</Link>
-              <button className={cx("btn-logout")} onClick={handleLogout}>
+              <Button to="/profile">Xin chào👋 #userName</Button>
+              <Button defaultBtn onClick={handleLogout}>
                 Đăng xuất
-              </button>
+              </Button>
             </>
           ) : (
-            <Link to="/login_register">Đăng Nhập</Link>
+            <Button defaultBtn to="/login_register">
+              Đăng Nhập
+            </Button>
           )}
         </div>
 
@@ -67,7 +69,7 @@ function Navbar() {
             </Button>
             {loggedIn ? (
               <>
-                <Link to="/profile">Xin chào👋 #userName</Link>
+                <Button to="/profile">Xin chào👋 #userName</Button>
                 <button
                   className={cx("mobile-btn-logout")}
                   onClick={handleLogout}
@@ -76,7 +78,7 @@ function Navbar() {
                 </button>
               </>
             ) : (
-              <Link to="/login_register">Đăng Nhập</Link>
+              <Button to="/login_register">Đăng Nhập</Button>
             )}
           </div>
         )}

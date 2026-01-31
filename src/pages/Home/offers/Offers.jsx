@@ -8,7 +8,6 @@ import rightArrowIcon from "../../../images/right-arrow-icon.svg";
 import offersData from "./Data";
 import Button from "../../../components/element/Button/Button";
 
-
 const Offers = React.forwardRef(({ scrollToCategory }, ref) => {
   return (
     <div className={cx("offers-container")} ref={ref}>
@@ -26,10 +25,7 @@ const Offers = React.forwardRef(({ scrollToCategory }, ref) => {
           </p>
         </div>
 
-        <Button
-          className={cx("offers-container-header-btn")}
-          onClick={scrollToCategory}
-        >
+        <Button btnRadius onClick={scrollToCategory}>
           Chọn theo danh mục
         </Button>
       </div>

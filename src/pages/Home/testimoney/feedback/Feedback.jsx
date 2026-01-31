@@ -1,5 +1,8 @@
-import "./Feedback.css";
 import React, { useState } from "react";
+import classNames from "classnames/bind";
+import styles from "./Feedback.module.scss";
+
+const cx = classNames.bind(styles);
 
 function Feedback({ isOpen, onClose }) {
   if (!isOpen) return null;
@@ -35,22 +38,22 @@ function Feedback({ isOpen, onClose }) {
   };
 
   return (
-    <div className="feedback-overlay">
-      <div className="feedback-container">
-        <div className="feedback-header">
+    <div className={cx("feedback-overlay")}>
+      <div className={cx("feedback-container")}>
+        <div className={cx("feedback-header")}>
           <h1>Ý kiến phản hồi</h1>
-          <button className="feedback-close-btn" onClick={onClose}>
+          <button className={cx("feedback-close-btn")} onClick={onClose}>
             ✕
           </button>
         </div>
 
-        <div className="feedback-body">
+        <div className={cx("feedback-body")}>
           <form
-            className="feedback-form"
+            className={cx("feedback-form")}
             onSubmit={handleSubmit}
             onReset={handleReset}
           >
-            <div className="form-group">
+            <div className={cx("form-group")}>
               <label htmlFor="fullname">Họ & Tên*</label>
               <input
                 type="text"
@@ -62,7 +65,7 @@ function Feedback({ isOpen, onClose }) {
               />
             </div>
 
-            <div className="form-group">
+            <div className={cx("form-group")}>
               <label htmlFor="email">Email*</label>
               <input
                 type="email"
@@ -74,7 +77,7 @@ function Feedback({ isOpen, onClose }) {
               />
             </div>
 
-            <div className="form-group">
+            <div className={cx("form-group")}>
               <label htmlFor="contact">Số điện thoại*</label>
               <input
                 type="tel"
@@ -86,10 +89,10 @@ function Feedback({ isOpen, onClose }) {
               />
             </div>
 
-            <div className="form-group">
+            <div className={cx("form-group")}>
               <label>Giới tính*</label>
-              <div className="radio-group">
-                <label>
+              <div className={cx("radio-group")}>
+                <label className={cx("radio-item")}>
                   <input
                     type="radio"
                     name="gender"
@@ -99,7 +102,7 @@ function Feedback({ isOpen, onClose }) {
                   />
                   Nam
                 </label>
-                <label>
+                <label className={cx("radio-item")}>
                   <input
                     type="radio"
                     name="gender"
@@ -109,7 +112,7 @@ function Feedback({ isOpen, onClose }) {
                   />
                   Nữ
                 </label>
-                <label>
+                <label className={cx("radio-item")}>
                   <input
                     type="radio"
                     name="gender"
@@ -122,9 +125,10 @@ function Feedback({ isOpen, onClose }) {
               </div>
             </div>
 
-            <div className="form-group">
+            <div className={cx("form-group")}>
               <label htmlFor="select">Chọn vấn đề bạn gặp phải*</label>
               <select
+                classNames={cx("select-option")}
                 id="select"
                 value={selectedOption}
                 onChange={(e) => setSelectedOption(e.target.value)}
@@ -151,7 +155,7 @@ function Feedback({ isOpen, onClose }) {
               </select>
             </div>
 
-            <div className="form-group">
+            <div className={cx("form-group")}>
               <label htmlFor="about">Ý kiến cá nhân*</label>
               <textarea
                 id="about"
@@ -164,15 +168,15 @@ function Feedback({ isOpen, onClose }) {
           </form>
         </div>
 
-        <div className="feedback-footer">
-          <button className="btn-submit" onClick={handleSubmit}>
+        <div className={cx("feedback-footer")}>
+          <button className={cx("btn-submit")} onClick={handleSubmit}>
             Gửi
           </button>
-          <div className="button-group">
-            <button className="btn-reset" onClick={handleReset}>
+          <div className={cx("button-group")}>
+            <button className={cx("btn-reset")} onClick={handleReset}>
               Làm mới
             </button>
-            <button className="btn-close" onClick={onClose}>
+            <button className={cx("btn-close")} onClick={onClose}>
               Đóng
             </button>
           </div>

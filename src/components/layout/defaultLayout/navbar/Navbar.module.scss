@@ -63,47 +63,6 @@
       }
     }
 
-    .login-register {
-      display: flex;
-      gap: 1rem;
-      align-items: center;
-
-      a {
-        font-size: 0.95rem;
-        color: #2563eb;
-        font-weight: 500;
-        padding: 0.5rem 0.8rem;
-        white-space: nowrap;
-        transition: color 0.2s ease;
-
-        &:hover {
-          color: #1d4ed8;
-        }
-      }
-
-      .btn-logout {
-        padding: 0.5rem 1rem;
-        border: none;
-        color: #fff;
-        background: #2563eb;
-        border-radius: 6px;
-        cursor: pointer;
-        font-weight: 500;
-        transition: all 0.3s ease;
-        box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
-
-        &:hover {
-          background-color: #1d4ed8;
-          transform: translateY(-1px);
-          box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
-        }
-
-        &:active {
-          transform: translateY(0);
-        }
-      }
-    }
-
     .mobile-menu-icon {
       font-size: 1.8rem;
       cursor: pointer;

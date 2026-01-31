@@ -1,0 +1,52 @@
+.home-container {
+  background-image: url(../../../images/background-home-page.png);
+  width: 100%;
+  /* min-height: calc(100vh - var(--header-height)); */
+  background-size: cover; /*phóng to nền ảnh để chiếm trọn container*/
+  background-position: center top; /*căn để k bị cắt phần trên */
+  background-repeat: no-repeat;
+  margin: var(--header-height) 0 0 0;
+  padding: 0;
+
+  .home-container-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* căn trái */
+    justify-content: center; /* căn dọc*/
+    text-align: left;
+    padding: 14rem 4rem;
+    gap: 1rem;
+    max-width: 640px;
+    margin: 0 0 0 8rem;
+    color: #000;
+    font-size: 1.4rem;
+
+    .home-container-content-desc {
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    .home-container-content-title {
+      margin: 0.5rem 0;
+      line-height: 3.8rem;
+      font-size: 3rem;
+      font-weight: 700;
+      width: 130%;
+      max-width: 38rem;
+
+      span {
+        background-color: #000;
+        color: #fff;
+        padding: 0.3rem 0.5rem;
+        display: inline-block;
+        margin: 0 0.3rem;
+      }
+    }
+   
+  }
+}
+
+.home-container-content-btn-img {
+  width: 1.4rem;
+  margin-left: .4rem;
+}
