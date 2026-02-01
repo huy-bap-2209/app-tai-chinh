@@ -85,6 +85,7 @@
 
 .testimoney-header-right-title button:hover {
   color: #1ad08daf;
+  text-decoration: underline;
 }
 
 .testimoney-list {

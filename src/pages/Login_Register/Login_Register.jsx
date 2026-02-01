@@ -3,6 +3,7 @@ import "./Login_Register.css";
 // import LogoLogin from "../../images/logo_login.svg";
 import BackgroundLogin from "../../images/loan-img-3.jpg";
 import { Link, useNavigate } from "react-router-dom";
+import Button from "../../components/element/Button/Button";
 
 function Login_Register() {
   const [isLoginRegister, setIsLoginRegister] = useState("Login");
@@ -95,9 +96,18 @@ function Login_Register() {
           </div>
           <div className="back-home-page-btn-login">
             <Link to="/">Quay lại Trang Chủ</Link>
-            <button type="submit" className="btn-login">
+            <Button
+              type="submit"
+              // className="btn-login"
+              greenBtn
+              onClick={() =>
+                alert(
+                  "từ ngày 1/1/2026 trở đi các khách hàng sẽ được giảm giá 50% phí dịch vụ",
+                )
+              }
+            >
               {isLoginRegister}
-            </button>
+            </Button>
           </div>
         </form>
       </div>

@@ -25,7 +25,7 @@ const FeatureData = [
   {
     id: 4,
     image: homeFeature4,
-    title: "Trả nợ tự động",
+    title: "Trả nợ \n tự động",
     desc: "Đối tác của chúng tôi rút tiền hoàn trả từ thẻ của bạn vào ngày đến hạn. Bạn có thể quản lý các khoản vay của mình.",
   },
 ];

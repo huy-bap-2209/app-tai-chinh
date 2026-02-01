@@ -15,7 +15,7 @@ function Feature() {
             <div className={cx("feature-items-icons")}>
               <img src={feature.image} alt="" />
             </div>
-            <h3>{feature.title}</h3>
+            <h3 className={cx("title")}>{feature.title}</h3>
             <span className={cx("feature-items-line")}></span>
             <p>{feature.desc}</p>
           </div>

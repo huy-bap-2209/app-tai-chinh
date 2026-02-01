@@ -35,7 +35,7 @@ function Navbar() {
         <div className={cx("login-register")}>
           {loggedIn ? (
             <>
-              <Button to="/profile">Xin chào👋 #userName</Button>
+              <Button textBtn to="/profile">Xin chào👋 #userName</Button>
               <Button defaultBtn onClick={handleLogout}>
                 Đăng xuất
               </Button>

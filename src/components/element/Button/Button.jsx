@@ -14,6 +14,8 @@ function Button({
   defaultBtn = false,
   btnLink = false,
   btnOutline = false,
+  greenBtn = false,
+  textBtn = false,
   btnRadius,
   ...rest
 }) {
@@ -31,7 +33,14 @@ function Button({
     Comp = "a";
   }
 
-  const classes = cx("btn-navigate", className, { defaultBtn, btnLink, btnRadius, btnOutline });
+  const classes = cx("btn-navigate", className, {
+    defaultBtn,
+    btnLink,
+    btnRadius,
+    btnOutline,
+    greenBtn,
+    textBtn,
+  });
 
   return (
     <Comp className={classes} {...props}>
